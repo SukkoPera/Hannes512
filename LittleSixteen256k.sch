@@ -495,7 +495,7 @@ AR Path="/62E48B71/63918991" Ref="J?"  Part="1"
 AR Path="/63918991" Ref="J1"  Part="1" 
 F 0 "J1" H 12337 3844 50  0000 R CNN
 F 1 "RAM_SELECTOR" H 12337 3753 50  0000 R CNN
-F 2 "Fixteen:Pin_Header_Straight_1x03-ModSilkS" H 12365 3820 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 12365 3820 50  0001 C CNN
 F 3 "~" H 12365 3820 50  0001 C CNN
 	1    12365 3820
 	-1   0    0    -1  
@@ -659,17 +659,6 @@ Text Label 11600 5240 0    50   ~ 0
 aec
 Text GLabel 11915 5240 2    50   Output ~ 0
 AEC
-$Comp
-L Connector:Conn_01x02_Male J3
-U 1 1 63C6835C
-P 11530 6010
-F 0 "J3" H 11638 6191 50  0000 C CNN
-F 1 "CONN_CS" H 11638 6100 50  0000 C CNN
-F 2 "" H 11530 6010 50  0001 C CNN
-F 3 "~" H 11530 6010 50  0001 C CNN
-	1    11530 6010
-	1    0    0    -1  
-$EndComp
 Text GLabel 12275 6010 2    50   Output ~ 0
 ~CS_IN
 Wire Wire Line
@@ -682,6 +671,21 @@ Text Notes 12560 6040 0    50   ~ 0
 $FD1x (FROM LIFTED PIN 16 OF PLA)
 Text Notes 12285 6150 0    50   ~ 0
 $FD10 (TO PIN 15 OF PLA SOCKET)
+$Comp
+L Connector:Conn_01x03_Male J3
+U 1 1 63E0AE52
+P 11530 6010
+F 0 "J3" H 11638 6291 50  0000 C CNN
+F 1 "CONN_CS" H 11638 6200 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 11530 6010 50  0001 C CNN
+F 3 "~" H 11530 6010 50  0001 C CNN
+	1    11530 6010
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	11730 5910 11920 5910
+Text GLabel 11920 5910 2    50   Output ~ 0
+~RESET
 Wire Bus Line
 	8005 2375 8005 3085
 Wire Bus Line
