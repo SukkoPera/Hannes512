@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 3 3
 Title "C16/+4 256 kB RAM Expansion"
-Date "2022-07-30"
+Date "2022-08-16"
 Rev "1git"
 Comp "SukkoPera"
 Comment1 "Hannes Version (Update 1 with \"TED Feature\")"
@@ -772,19 +772,19 @@ Entry Wire Line
 Entry Wire Line
 	5090 3160 5190 3260
 Text Label 5190 3460 0    50   ~ 0
-a2
+a14
 Wire Wire Line
 	5605 3460 5190 3460
 Text Label 5190 3360 0    50   ~ 0
-a1
+a13
 Wire Wire Line
 	5605 3360 5190 3360
 Text Label 5190 3260 0    50   ~ 0
-a0
+a12
 Wire Wire Line
 	5605 3260 5190 3260
 Text Label 5190 3560 0    50   ~ 0
-a3
+a15
 Wire Wire Line
 	5605 3560 5190 3560
 Entry Wire Line
@@ -911,4 +911,12 @@ Wire Bus Line
 	12035 2450 12035 5755
 Wire Bus Line
 	9285 2250 9285 4950
+Text Label 6605 5435 0    50   ~ 0
+p0
+Text Label 7120 5980 0    50   ~ 0
+p1
+Text Label 6605 6695 0    50   ~ 0
+p6
+Text Label 7120 7240 0    50   ~ 0
+p7
 $EndSCHEMATC
