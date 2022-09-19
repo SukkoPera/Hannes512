@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 3
 Title "Hannes256: C16/+4 256 kB RAM Expansion"
-Date "2022-07-29"
+Date "2022-09-19"
 Rev "1git"
 Comp "SukkoPera"
 Comment1 "Hannes Version (Update 1 with \"TED Feature\")"
@@ -110,19 +110,6 @@ Text Label 5140 3385 0    50   ~ 0
 cs0
 Text Label 5140 3485 0    50   ~ 0
 cs1
-$Comp
-L power:VCC #PWR?
-U 1 1 639188D7
-P 4960 2630
-AR Path="/62E48B71/639188D7" Ref="#PWR?"  Part="1" 
-AR Path="/639188D7" Ref="#PWR01"  Part="1" 
-F 0 "#PWR01" H 4960 2480 50  0001 C CNN
-F 1 "VCC" H 4977 2803 50  0000 C CNN
-F 2 "" H 4960 2630 50  0001 C CNN
-F 3 "" H 4960 2630 50  0001 C CNN
-	1    4960 2630
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	4960 2630 4960 3285
 Wire Wire Line
@@ -433,19 +420,6 @@ Text Label 8105 3385 0    50   ~ 0
 cs0
 Text Label 8105 3485 0    50   ~ 0
 cs1
-$Comp
-L power:VCC #PWR?
-U 1 1 63918977
-P 7830 2630
-AR Path="/62E48B71/63918977" Ref="#PWR?"  Part="1" 
-AR Path="/63918977" Ref="#PWR02"  Part="1" 
-F 0 "#PWR02" H 7830 2480 50  0001 C CNN
-F 1 "VCC" H 7847 2803 50  0000 C CNN
-F 2 "" H 7830 2630 50  0001 C CNN
-F 3 "" H 7830 2630 50  0001 C CNN
-	1    7830 2630
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	7830 2630 7830 3285
 Wire Wire Line
@@ -627,19 +601,6 @@ Wire Wire Line
 Connection ~ 11900 3190
 Wire Wire Line
 	11900 3190 12045 3190
-$Comp
-L power:VCC #PWR?
-U 1 1 639189D7
-P 11900 3105
-AR Path="/62E48B71/639189D7" Ref="#PWR?"  Part="1" 
-AR Path="/639189D7" Ref="#PWR03"  Part="1" 
-F 0 "#PWR03" H 11900 2955 50  0001 C CNN
-F 1 "VCC" H 11917 3278 50  0000 C CNN
-F 2 "" H 11900 3105 50  0001 C CNN
-F 3 "" H 11900 3105 50  0001 C CNN
-	1    11900 3105
-	1    0    0    -1  
-$EndComp
 Wire Wire Line
 	11330 3920 12045 3920
 Wire Wire Line
@@ -692,4 +653,37 @@ Wire Bus Line
 	10425 4685 10425 5600
 Wire Bus Line
 	10425 2375 10425 4285
+$Comp
+L power:+5V #PWR0103
+U 1 1 633D4159
+P 4960 2630
+F 0 "#PWR0103" H 4960 2480 50  0001 C CNN
+F 1 "+5V" H 4975 2803 50  0000 C CNN
+F 2 "" H 4960 2630 50  0001 C CNN
+F 3 "" H 4960 2630 50  0001 C CNN
+	1    4960 2630
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0104
+U 1 1 633D4958
+P 7830 2630
+F 0 "#PWR0104" H 7830 2480 50  0001 C CNN
+F 1 "+5V" H 7845 2803 50  0000 C CNN
+F 2 "" H 7830 2630 50  0001 C CNN
+F 3 "" H 7830 2630 50  0001 C CNN
+	1    7830 2630
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0105
+U 1 1 633D56E2
+P 11900 3105
+F 0 "#PWR0105" H 11900 2955 50  0001 C CNN
+F 1 "+5V" H 11915 3278 50  0000 C CNN
+F 2 "" H 11900 3105 50  0001 C CNN
+F 3 "" H 11900 3105 50  0001 C CNN
+	1    11900 3105
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

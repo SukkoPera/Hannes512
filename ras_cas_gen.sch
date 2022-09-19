@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 3 3
 Title "Hannes256: C16/+4 256 kB RAM Expansion"
-Date "2022-08-16"
+Date "2022-09-19"
 Rev "1git"
 Comp "SukkoPera"
 Comment1 "Hannes Version (Update 1 with \"TED Feature\")"
@@ -251,20 +251,6 @@ F 3 "~" H 4415 3210 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:VCC #PWR?
-U 1 1 63A64684
-P 4415 2960
-AR Path="/63A64684" Ref="#PWR?"  Part="1" 
-AR Path="/62E48B71/63A64684" Ref="#PWR?"  Part="1" 
-AR Path="/63A22C28/63A64684" Ref="#PWR017"  Part="1" 
-F 0 "#PWR017" H 4415 2810 50  0001 C CNN
-F 1 "VCC" H 4430 3133 50  0000 C CNN
-F 2 "" H 4415 2960 50  0001 C CNN
-F 3 "" H 4415 2960 50  0001 C CNN
-	1    4415 2960
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR?
 U 1 1 63A6468A
 P 4415 3460
@@ -371,20 +357,6 @@ F 1 "GND" H 12485 4755 50  0000 C CNN
 F 2 "" H 12485 4905 50  0001 C CNN
 F 3 "" H 12485 4905 50  0001 C CNN
 	1    12485 4905
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VCC #PWR?
-U 1 1 63A6466C
-P 12485 4405
-AR Path="/63A6466C" Ref="#PWR?"  Part="1" 
-AR Path="/62E48B71/63A6466C" Ref="#PWR?"  Part="1" 
-AR Path="/63A22C28/63A6466C" Ref="#PWR018"  Part="1" 
-F 0 "#PWR018" H 12485 4255 50  0001 C CNN
-F 1 "VCC" H 12485 4555 50  0000 C CNN
-F 2 "" H 12485 4405 50  0001 C CNN
-F 3 "" H 12485 4405 50  0001 C CNN
-	1    12485 4405
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
@@ -903,14 +875,6 @@ Wire Wire Line
 	5910 5795 5910 6080
 Text Notes 5730 4270 0    50   ~ 0
 ALL THE GLUE LOGIC WAS REPLACED\nWITH A SINGLE OLD-SKOOLZ GAL!
-Wire Bus Line
-	5420 5535 5420 7340
-Wire Bus Line
-	5090 2250 5090 3455
-Wire Bus Line
-	12035 2450 12035 5755
-Wire Bus Line
-	9285 2250 9285 4950
 Text Label 6605 5435 0    50   ~ 0
 p0
 Text Label 7120 5980 0    50   ~ 0
@@ -919,4 +883,71 @@ Text Label 6605 6695 0    50   ~ 0
 p6
 Text Label 7120 7240 0    50   ~ 0
 p7
+$Comp
+L power:+5V #PWR?
+U 1 1 633D8DCD
+P 4415 2960
+AR Path="/633D8DCD" Ref="#PWR?"  Part="1" 
+AR Path="/62E48B71/633D8DCD" Ref="#PWR?"  Part="1" 
+AR Path="/63A22C28/633D8DCD" Ref="#PWR0106"  Part="1" 
+F 0 "#PWR0106" H 4415 2810 50  0001 C CNN
+F 1 "+5V" H 4430 3133 50  0000 C CNN
+F 2 "" H 4415 2960 50  0001 C CNN
+F 3 "" H 4415 2960 50  0001 C CNN
+	1    4415 2960
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 633D9554
+P 12485 4405
+AR Path="/633D9554" Ref="#PWR?"  Part="1" 
+AR Path="/62E48B71/633D9554" Ref="#PWR?"  Part="1" 
+AR Path="/63A22C28/633D9554" Ref="#PWR0107"  Part="1" 
+F 0 "#PWR0107" H 12485 4255 50  0001 C CNN
+F 1 "+5V" H 12500 4578 50  0000 C CNN
+F 2 "" H 12485 4405 50  0001 C CNN
+F 3 "" H 12485 4405 50  0001 C CNN
+	1    12485 4405
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 633E34D2
+P 12485 3790
+AR Path="/633E34D2" Ref="#PWR?"  Part="1" 
+AR Path="/62E48B71/633E34D2" Ref="#PWR?"  Part="1" 
+AR Path="/63A22C28/633E34D2" Ref="#PWR0108"  Part="1" 
+F 0 "#PWR0108" H 12485 3640 50  0001 C CNN
+F 1 "+5V" H 12500 3963 50  0000 C CNN
+F 2 "" H 12485 3790 50  0001 C CNN
+F 3 "" H 12485 3790 50  0001 C CNN
+	1    12485 3790
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0109
+U 1 1 633E54A0
+P 12855 3790
+F 0 "#PWR0109" H 12855 3640 50  0001 C CNN
+F 1 "VCC" H 12870 3963 50  0000 C CNN
+F 2 "" H 12855 3790 50  0001 C CNN
+F 3 "" H 12855 3790 50  0001 C CNN
+	1    12855 3790
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	12855 3790 12855 3890
+Wire Wire Line
+	12855 3890 12485 3890
+Wire Wire Line
+	12485 3890 12485 3790
+Wire Bus Line
+	5420 5535 5420 7340
+Wire Bus Line
+	5090 2250 5090 3455
+Wire Bus Line
+	12035 2450 12035 5755
+Wire Bus Line
+	9285 2250 9285 4950
 $EndSCHEMATC
