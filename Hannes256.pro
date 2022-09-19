@@ -25,7 +25,7 @@ ERC_TestSimilarLabels=0
 [pcbnew]
 version=1
 PageLayoutDescrFile=
-LastNetListRead=LittleSixteen256k.net
+LastNetListRead=Hannes256.net
 CopperLayerCount=2
 BoardThickness=1.6
 AllowMicroVias=0

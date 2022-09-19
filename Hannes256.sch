@@ -4,7 +4,7 @@ EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 3
-Title "C16/+4 256 kB RAM Expansion"
+Title "Hannes256: C16/+4 256 kB RAM Expansion"
 Date "2022-07-29"
 Rev "1git"
 Comp "SukkoPera"
