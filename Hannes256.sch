@@ -647,12 +647,6 @@ Wire Wire Line
 	11730 5910 11920 5910
 Text GLabel 11920 5910 2    50   Output ~ 0
 ~RESET
-Wire Bus Line
-	8005 2375 8005 3085
-Wire Bus Line
-	10425 4685 10425 5600
-Wire Bus Line
-	10425 2375 10425 4285
 $Comp
 L power:+5V #PWR0103
 U 1 1 633D4159
@@ -686,4 +680,10 @@ F 3 "" H 11900 3105 50  0001 C CNN
 	1    11900 3105
 	1    0    0    -1  
 $EndComp
+Wire Bus Line
+	8005 2375 8005 3085
+Wire Bus Line
+	10425 4685 10425 5600
+Wire Bus Line
+	10425 2375 10425 4285
 $EndSCHEMATC
