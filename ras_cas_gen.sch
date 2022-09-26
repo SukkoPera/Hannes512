@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 3 3
 Title "Hannes256: C16/+4 256 kB RAM Expansion"
-Date "2022-09-19"
+Date "2022-09-26"
 Rev "1git"
 Comp "SukkoPera"
 Comment1 "Hannes Version (Update 1 with \"TED Feature\")"
@@ -272,7 +272,7 @@ AR Path="/63A64692" Ref="U?"  Part="1"
 AR Path="/62E48B71/63A64692" Ref="U?"  Part="1" 
 AR Path="/63A22C28/63A64692" Ref="U6"  Part="1" 
 F 0 "U6" H 10785 4900 50  0000 C CNN
-F 1 "74LS257" H 10785 4600 50  0000 C CNN
+F 1 "74HCT257" H 10785 4600 50  0000 C CNN
 F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 10735 4750 50  0001 C CNN
 F 3 "" H 10735 4750 50  0001 C CNN
 	1    10735 4750
@@ -286,7 +286,7 @@ AR Path="/63A64698" Ref="U?"  Part="1"
 AR Path="/62E48B71/63A64698" Ref="U?"  Part="1" 
 AR Path="/63A22C28/63A64698" Ref="U5"  Part="1" 
 F 0 "U5" H 10785 3200 50  0000 C CNN
-F 1 "74LS257" H 10785 2900 50  0000 C CNN
+F 1 "74HCT257" H 10785 2900 50  0000 C CNN
 F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 10735 3050 50  0001 C CNN
 F 3 "" H 10735 3050 50  0001 C CNN
 	1    10735 3050
@@ -950,4 +950,6 @@ F 3 "74xx/74hc_hct74.pdf" H 6285 6795 50  0001 C CNN
 	1    6285 6795
 	1    0    0    -1  
 $EndComp
+Text Notes 10270 3905 0    50   ~ 0
+'157s WILL BE FINE, TOO
 $EndSCHEMATC
