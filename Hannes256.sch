@@ -10,7 +10,7 @@ Rev "1git"
 Comp "SukkoPera"
 Comment1 "Hannes Version (Update 1 with \"TED Feature\")"
 Comment2 "Based on drawings by Solder/Synergy"
-Comment3 ""
+Comment3 "Licensed under CC BY-NC-SA 4.0"
 Comment4 ""
 $EndDescr
 $Sheet

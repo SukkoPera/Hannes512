@@ -10,7 +10,7 @@ Rev "1git"
 Comp "SukkoPera"
 Comment1 "Hannes Version (Update 1 with \"TED Feature\")"
 Comment2 "Based on drawings by Solder/Synergy"
-Comment3 ""
+Comment3 "Licensed under CC BY-NC-SA 4.0"
 Comment4 ""
 $EndDescr
 Text Label 7490 2960 2    50   ~ 0
@@ -242,8 +242,8 @@ U 1 1 63A64678
 P 4415 3210
 AR Path="/63A64678" Ref="C?"  Part="1" 
 AR Path="/62E48B71/63A64678" Ref="C?"  Part="1" 
-AR Path="/63A22C28/63A64678" Ref="C7"  Part="1" 
-F 0 "C7" H 4530 3256 50  0000 L CNN
+AR Path="/63A22C28/63A64678" Ref="C2"  Part="1" 
+F 0 "C2" H 4530 3256 50  0000 L CNN
 F 1 "100n" H 4530 3165 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4453 3060 50  0001 C CNN
 F 3 "~" H 4415 3210 50  0001 C CNN
@@ -337,8 +337,8 @@ U 1 1 63A6467E
 P 12485 4655
 AR Path="/63A6467E" Ref="C?"  Part="1" 
 AR Path="/62E48B71/63A6467E" Ref="C?"  Part="1" 
-AR Path="/63A22C28/63A6467E" Ref="C2"  Part="1" 
-F 0 "C2" H 12600 4701 50  0000 L CNN
+AR Path="/63A22C28/63A6467E" Ref="C6"  Part="1" 
+F 0 "C6" H 12600 4701 50  0000 L CNN
 F 1 "100n" H 12600 4610 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 12523 4505 50  0001 C CNN
 F 3 "~" H 12485 4655 50  0001 C CNN
@@ -401,8 +401,8 @@ U 1 1 63A64654
 P 12485 3020
 AR Path="/63A64654" Ref="C?"  Part="1" 
 AR Path="/62E48B71/63A64654" Ref="C?"  Part="1" 
-AR Path="/63A22C28/63A64654" Ref="C1"  Part="1" 
-F 0 "C1" H 12600 3066 50  0000 L CNN
+AR Path="/63A22C28/63A64654" Ref="C5"  Part="1" 
+F 0 "C5" H 12600 3066 50  0000 L CNN
 F 1 "100n" H 12600 2975 50  0000 L CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 12523 2870 50  0001 C CNN
 F 3 "~" H 12485 3020 50  0001 C CNN
@@ -572,8 +572,8 @@ U 1 1 63ECD15A
 P 1030 10005
 AR Path="/63ECD15A" Ref="C?"  Part="1" 
 AR Path="/62E48B71/63ECD15A" Ref="C?"  Part="1" 
-AR Path="/63A22C28/63ECD15A" Ref="C5"  Part="1" 
-F 0 "C5" H 915 10051 50  0000 R CNN
+AR Path="/63A22C28/63ECD15A" Ref="C3"  Part="1" 
+F 0 "C3" H 915 10051 50  0000 R CNN
 F 1 "100n" H 915 9960 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 1068 9855 50  0001 C CNN
 F 3 "~" H 1030 10005 50  0001 C CNN
@@ -632,8 +632,8 @@ U 1 1 63EDC36A
 P 2595 10005
 AR Path="/63EDC36A" Ref="C?"  Part="1" 
 AR Path="/62E48B71/63EDC36A" Ref="C?"  Part="1" 
-AR Path="/63A22C28/63EDC36A" Ref="C6"  Part="1" 
-F 0 "C6" H 2480 10051 50  0000 R CNN
+AR Path="/63A22C28/63EDC36A" Ref="C4"  Part="1" 
+F 0 "C4" H 2480 10051 50  0000 R CNN
 F 1 "100n" H 2480 9960 50  0000 R CNN
 F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 2633 9855 50  0001 C CNN
 F 3 "~" H 2595 10005 50  0001 C CNN
