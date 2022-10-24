@@ -1,0 +1,15 @@
+Name Hannes256_GAL20;
+Partno TBD;
+Date 26/07/2022;
+Revision 01;
+Designer SukkoPera;
+Company OpenRetroWorks;
+Assembly None;
+Location Italy;
+Device g20v8as;			// Simple mode
+
+// GAL20V8
+// Inputs: 1-11, 13, 14, 23
+// Inputs/Outputs: 15-22 (18 and 19 have no fb path in simple mode, 15 and 22 do not in complex mode)
+
+$INCLUDE hannes_main.inc

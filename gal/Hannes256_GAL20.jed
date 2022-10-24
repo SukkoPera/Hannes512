@@ -1,8 +1,8 @@
 
 CUPL(WM)        5.0a  Serial# 60008009
 Device          g20v8as  Library DLIB-h-40-1
-Created         Tue Jul 26 18:33:08 2022
-Name            Hannes256kU1
+Created         Mon Oct 24 23:44:34 2022
+Name            Hannes256_GAL20
 Partno          TBD
 Revision        01
 Date            26/07/2022
@@ -33,4 +33,4 @@ Location        Italy
 *L02656 11111111111111111111111111111111
 *L02688 111111111111111110
 *C3752
-*E0F5
+*E18B

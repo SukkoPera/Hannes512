@@ -1,13 +1,3 @@
-Name Hannes256kU1;
-Partno TBD;
-Date 26/07/2022;
-Revision 01;
-Designer SukkoPera;
-Company OpenRetroWorks;
-Assembly None;
-Location Italy;
-Device g20v8as;			// Simple mode (Should also compile with g22v10)
-
 /** Pin Definitions **/
 // GAL20V8
 // Inputs: 1-11, 13, 14, 23

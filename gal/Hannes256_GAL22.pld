@@ -1,0 +1,11 @@
+Name Hannes256_GAL22;
+Partno TBD;
+Date 26/07/2022;
+Revision 01;
+Designer SukkoPera;
+Company OpenRetroWorks;
+Assembly None;
+Location Italy;
+Device g22v10;
+
+$INCLUDE hannes_main.inc
