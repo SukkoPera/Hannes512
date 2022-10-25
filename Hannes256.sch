@@ -680,12 +680,6 @@ F 3 "" H 11900 3105 50  0001 C CNN
 	1    11900 3105
 	1    0    0    -1  
 $EndComp
-Wire Bus Line
-	8005 2375 8005 3085
-Wire Bus Line
-	10425 4685 10425 5600
-Wire Bus Line
-	10425 2375 10425 4285
 $Comp
 L void:Void V0
 U 1 1 63C4EC1B
@@ -697,4 +691,10 @@ F 3 "" H 15540 9765 50  0001 C CNN
 	1    15540 9765
 	1    0    0    -1  
 $EndComp
+Wire Bus Line
+	8005 2375 8005 3085
+Wire Bus Line
+	10425 4685 10425 5600
+Wire Bus Line
+	10425 2375 10425 4285
 $EndSCHEMATC

@@ -436,8 +436,6 @@ Connection ~ 5830 6995
 Wire Wire Line
 	5830 6995 5990 6995
 Wire Bus Line
-	6090 2475 6090 8770
-Wire Bus Line
 	3105 8770 6090 8770
 Wire Wire Line
 	4040 2275 3940 2275
@@ -912,8 +910,6 @@ Wire Wire Line
 Connection ~ 10555 6995
 Wire Wire Line
 	10555 6995 10715 6995
-Wire Bus Line
-	10815 2475 10815 8770
 Wire Wire Line
 	8765 2275 8665 2275
 Wire Wire Line
@@ -1351,6 +1347,10 @@ F 3 "" H 11010 6950 50  0001 C CNN
 	1    11010 6950
 	1    0    0    -1  
 $EndComp
+Wire Bus Line
+	6090 2475 6090 8770
+Wire Bus Line
+	10815 2475 10815 8770
 Wire Bus Line
 	5990 2575 5990 8290
 Wire Bus Line
