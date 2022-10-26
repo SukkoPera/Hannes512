@@ -1,7 +1,19 @@
-/** Pin Definitions **/
-// GAL20V8
-// Inputs: 1-11, 13, 14, 23
-// Inputs/Outputs: 15-22 (18 and 19 have no fb path in simple mode, 15 and 22 do not in complex mode)
+/* Hannes256 GAL Equations
+ * Copyright 2022 SukkoPera <software@sukkology.net>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
 
 /* This implements almost all the logic required by the 256 kB RAM Expansion for the Commodore 16/Plus 4 designed by
  * Hannes, as drawn in the schematics by Solder/Synergy.
@@ -22,12 +34,14 @@
  * Notes:
  * - Before you activate the expansion you should initialize this control register. You can't read this register.
  * - After switch-on the plus/4 all bits are "1". The standard bank is bank 3.
- * - The bank 3 is always in the nonswitchable area.
+ * - Bank 3 is always in the nonswitchable area.
  *
  * This GAL implements all the glue logic shown in the schematics by Solder/Synergy, *except* the 6529B implementing the
  * control register. Since that IC is not easy to find these days, we'll find an alternative, probably involving a
  * 74HCT273.
  */
+
+/** Pin Definitions **/
 
 /* RAM Register /CS (replace HCT138)
  * The idea is to intercept the Userport /CS range ($FD10-FD1F, PLA pin 16) and further decode it, feeding $FD10 to its
@@ -42,6 +56,7 @@ Pin 2 = a1;
 Pin 3 = a2;
 Pin 4 = a3;
 Pin 5 = userport_range;		// $FD1x (C16: U16/+4: U19 pin 16)
+Pin 23 = rw;				// R/W: Since our "register" cannot be read, let's enable it only on writes
 Pin 21 = userport_cs;		// OUTPUT: $FD10 back to Userport 6529 (U5 pin 19, +4 only)
 Pin 22 = ram_cs;			// OUTPUT: $FD16 = /CS for RAM Register (Additional MOS 6529 on U5)
 
@@ -74,7 +89,7 @@ FIELD ram_slot = [p1..0];
 
 // RAM Register
 !userport_cs = !userport_range & addr:xxx0;
-!ram_cs = !userport_range & addr:xxx6;
+!ram_cs = !rw & !userport_range & addr:xxx6;		// R/W low => Writing
 
 // MA8 Generation
 switchable_range = (!p7 & addr:[1000..FFFF]) # (p7 & addr:[4000..FFFF]);
