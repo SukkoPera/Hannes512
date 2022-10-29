@@ -1,0 +1,67 @@
+CSIM(WM): CUPL Simulation Program
+Version 5.0a Serial# 
+Copyright (c) 1983, 1998 Logical Devices, Inc.
+CREATED Sat Oct 29 10:03:05 2022
+
+LISTING FOR SIMULATION FILE: HANNES256_GAL22.si
+
+   1: Name Hannes256kU1;
+                       ^
+[0025sa] Please note: inconsistent header information
+
+   2: Partno TBD;
+   3: Date 26/07/2022;
+   4: Revision 01;
+   5: Designer SukkoPera;
+   6: Company OpenRetroWorks;
+   7: Assembly None;
+   8: Location Italy;
+   9: Device g20v8as;
+  10: 
+  11: FIELD addr = [a15,a14,a13,a12,a11,a10,a9,a8,a7,a6,a5,a4,a3,a2,a1,a0];
+  12: FIELD ram_slot = [p1,p0];
+  13:
+  14: ORDER: a3, a2, a1, a0, rw, userport_range, userport_cs, ramreg_wcs, ramreg_rcs; 
+  15: 
+
+==================
+           u      
+           s      
+           e      
+           ru     
+           psrr   
+           oeaa   
+           rrmm   
+           tprr   
+           _oee   
+           rrgg   
+           at__   
+           n_wr   
+      aaaargccc   
+      3210wesss   
+==================
+0001: 011111HHH
+0002: 100111HHH
+0003: 110111HHH
+0004: 000011HHH
+0005: 100111HHH
+0006: 110111HHH
+0007: 000111HHH
+0008: 000010LHH
+0009: 000000LHH
+0010: 000110HHH
+0011: 001010HHH
+0012: 001110HHH
+0013: 010010HHH
+0014: 010110HHH
+0015: 011010HHL
+0016: 011000HLH
+0017: 011110HHH
+0018: 100010HHH
+0019: 100110HHH
+0020: 101010HHH
+0021: 101110HHH
+0022: 110010HHH
+0023: 110110HHH
+0024: 111010HHH
+0025: 111110HHH

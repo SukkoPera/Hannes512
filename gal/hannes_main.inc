@@ -58,7 +58,8 @@ Pin 4 = a3;
 Pin 5 = userport_range;		// $FD1x (C16: U16/+4: U19 pin 16)
 Pin 23 = rw;				// R/W: Since our "register" cannot be read, let's enable it only on writes
 Pin 21 = userport_cs;		// OUTPUT: $FD10 back to Userport 6529 (U5 pin 19, +4 only)
-Pin 22 = ram_cs;			// OUTPUT: $FD16 = /CS for RAM Register (Additional MOS 6529 on U5)
+Pin 22 = ramreg_wcs;		// OUTPUT: $FD16 = /CS for RAM Register Write (Additional MOS 6529 on U5)
+Pin 19 = ramreg_rcs;		// OUTPUT: $FD16 = /CS for RAM Register Read (Additional MOS 6529 on U5)
 
 /* MA8 Generation (replace LS02, HCT02 and HCT257)
  * P0/P1: Select RAM-bank (0-3), standard is RAM-bank 3
@@ -78,7 +79,7 @@ Pin 16 = aec;					// Low when TED accesses bus
 Pin 17 = switchable_range;		// Intermediate signal to workaround GAL limitations, leave unconnected
 Pin 20 = ma8;					// OUTPUT: Multiplexed A8 for 256k RAM's additional address line
 
-// Free pins: 18, 19, 23
+// Free pins: 18
 
 
 /** Declarations and Intermediate Variable Definitions **/
@@ -89,7 +90,8 @@ FIELD ram_slot = [p1..0];
 
 // RAM Register
 !userport_cs = !userport_range & addr:xxx0;
-!ram_cs = !rw & !userport_range & addr:xxx6;		// R/W low => Writing
+!ramreg_rcs = rw & !userport_range & addr:xxx6;			// R/W high => Reading
+!ramreg_wcs = !rw & !userport_range & addr:xxx6;		// R/W low => Writing
 
 // MA8 Generation
 switchable_range = (!p7 & addr:[1000..FFFF]) # (p7 & addr:[4000..FFFF]);
