@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 3
 Title "Hannes256: C16/+4 256 kB RAM Expansion"
-Date "2022-09-19"
+Date "2022-11-03"
 Rev "1git"
 Comp "SukkoPera"
 Comment1 "Hannes Version (Update 1 with \"TED Feature\")"
