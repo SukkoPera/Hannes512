@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 3 3
 Title "Hannes256: C16/+4 256 kB RAM Expansion"
-Date "2022-12-04"
+Date "2023-01-09"
 Rev "2git"
 Comp "SukkoPera"
 Comment1 "Hannes Version (Update 1 with \"TED Feature\")"
@@ -525,7 +525,6 @@ Text Label 12485 5855 0    60   ~ 0
 m8
 Entry Wire Line
 	13035 5755 12935 5855
-NoConn ~ 7105 3360
 Wire Wire Line
 	7105 3160 9570 3160
 Wire Wire Line
@@ -774,7 +773,7 @@ F 3 "" H 6055 7160 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 5095 6665 0    50   ~ 0
-~cs_ramwr
+cs_ramwr
 Wire Wire Line
 	5090 5765 5555 5765
 Entry Wire Line
@@ -1257,6 +1256,10 @@ Wire Wire Line
 	2150 7475 2150 7660
 Text Label 7490 2960 2    50   ~ 0
 ~cs_ramwr
+Wire Wire Line
+	7105 3360 7490 3360
+Text Label 7490 3360 2    50   ~ 0
+cs_ramwr
 Wire Bus Line
 	7590 3760 7590 4535
 Wire Bus Line
