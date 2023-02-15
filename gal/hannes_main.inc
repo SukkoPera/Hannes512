@@ -87,13 +87,11 @@ Pin 13 = p1;					// P1 from RAM Register
 Pin 14 = p6;					// P6 from RAM Register
 Pin 15 = p7;					// P7 from RAM Register
 Pin 16 = aec;					// Low when TED accesses bus
-Pin 17 = switchable_range;		// Intermediate signal to workaround GAL limitations, leave unconnected
 Pin 20 = ma8;					// OUTPUT: Multiplexed A8 for 256k RAM's additional address line
 
 
 /** Declarations and Intermediate Variable Definitions **/
 FIELD addr = [a15..0];
-FIELD ram_slot = [p1..0];
 
 /** Logic Equations **/
 
@@ -108,7 +106,7 @@ ramreg_wcs = !rw & !userport_range & addr:xxx6;		// R/W low => Writing. Note tha
                                                     // this can basically be the opposite of ramreg_wcs
 
 // MA8 Generation
-switchable_range = (!p7 & addr:[1000..FFFF]) # (p7 & addr:[4000..FFFF]);
-lo = ram_slot:'b'x0 & switchable_range;
-hi = ram_slot:'b'0x & switchable_range;
-ma8 = (aec # p6) & ((!mux & lo) # (mux & hi));
+_switchable_range = (!p7 & addr:[1000..FFFF]) # (p7 & addr:[4000..FFFF]);
+_lo = (aec & (p1 # !_switchable_range)) # (!aec & (!p6 # !_switchable_range # p1));
+_hi = (aec & (p0 # !_switchable_range)) # (!aec & (!p6 # !_switchable_range # p0));
+ma8 = (!mux & _lo) # (mux & _hi);
