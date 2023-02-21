@@ -5,225 +5,16 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 3 3
 Title "Hannes256: C16/+4 256 kB RAM Expansion"
-Date "2023-01-09"
-Rev "2git"
+Date "2023-02-21"
+Rev "3git"
 Comp "SukkoPera"
 Comment1 "Hannes Version (Update 1 with \"TED Feature\")"
 Comment2 "Based on drawings by Solder/Synergy"
 Comment3 "Licensed under CC BY-NC-SA 4.0"
 Comment4 ""
 $EndDescr
-Text Notes 7600 2955 0    50   ~ 0
-$FD16 WRITE
-Wire Wire Line
-	7105 3560 7585 3560
 Text Notes 15795 9665 2    50   ~ 0
 Update 1 adds a "TED Feature": the purpose of the change is to restrict\nTED access to RAM bank 3 when the 6th bit of the RAM register is cleared.\nIf bit 6 is HIGH, the current ram bank is retained during TED access. So:\n- U5 Bit6=0: CPU accesses current RAM, TED always accesses RAM bank 3\n- U5 Bit6=1: CPU accesses current RAM, TED accesses current RAM
-Entry Wire Line
-	10285 2400 10385 2500
-Entry Wire Line
-	10285 2500 10385 2600
-Entry Wire Line
-	10285 2650 10385 2750
-Entry Wire Line
-	10285 2750 10385 2850
-Entry Wire Line
-	10285 2900 10385 3000
-Entry Wire Line
-	10285 3000 10385 3100
-Entry Wire Line
-	10285 3150 10385 3250
-Entry Wire Line
-	10285 3250 10385 3350
-Entry Wire Line
-	10285 4100 10385 4200
-Entry Wire Line
-	10285 4200 10385 4300
-Entry Wire Line
-	10285 4350 10385 4450
-Entry Wire Line
-	10285 4450 10385 4550
-Entry Wire Line
-	10285 4600 10385 4700
-Entry Wire Line
-	10285 4700 10385 4800
-Entry Wire Line
-	10285 4850 10385 4950
-Entry Wire Line
-	10285 4950 10385 5050
-Text Label 10585 2500 0    60   ~ 0
-a15
-Text Label 10585 2600 0    60   ~ 0
-a0
-Text Label 10585 2750 0    60   ~ 0
-a8
-Text Label 10585 2850 0    60   ~ 0
-a1
-Text Label 10585 3000 0    60   ~ 0
-a9
-Text Label 10585 3100 0    60   ~ 0
-a2
-Text Label 10585 3250 0    60   ~ 0
-a10
-Text Label 10585 3350 0    60   ~ 0
-a3
-Text Label 10585 4200 0    60   ~ 0
-a11
-Text Label 10585 4450 0    60   ~ 0
-a12
-Text Label 10585 4700 0    60   ~ 0
-a13
-Text Label 10585 4800 0    60   ~ 0
-a6
-Text Label 10585 4950 0    60   ~ 0
-a14
-Text Label 10585 5050 0    60   ~ 0
-a7
-Entry Wire Line
-	12935 2550 13035 2450
-Entry Wire Line
-	12935 2800 13035 2700
-Entry Wire Line
-	12935 3050 13035 2950
-Entry Wire Line
-	12935 3300 13035 3200
-Entry Wire Line
-	12935 4250 13035 4150
-Entry Wire Line
-	12935 4500 13035 4400
-Entry Wire Line
-	12935 4750 13035 4650
-Entry Wire Line
-	12935 5000 13035 4900
-Text Label 12485 2550 0    60   ~ 0
-m0
-Text Label 12485 2800 0    60   ~ 0
-m1
-Text Label 12485 3050 0    60   ~ 0
-m2
-Text Label 12485 3300 0    60   ~ 0
-m3
-Text Label 12485 4250 0    60   ~ 0
-m4
-Text Label 12485 4500 0    60   ~ 0
-m5
-Text Label 12485 4750 0    60   ~ 0
-m6
-Text Label 12485 5000 0    60   ~ 0
-m7
-Wire Wire Line
-	10985 3600 10735 3600
-Wire Wire Line
-	10735 3600 10735 3700
-Wire Wire Line
-	10985 5300 10735 5300
-Wire Wire Line
-	10735 5300 10735 5400
-Wire Wire Line
-	10985 3500 10185 3500
-Wire Wire Line
-	10185 5200 10985 5200
-Wire Wire Line
-	10985 2500 10385 2500
-Wire Wire Line
-	10385 2600 10985 2600
-Wire Wire Line
-	10985 2750 10385 2750
-Wire Wire Line
-	10985 2850 10385 2850
-Wire Wire Line
-	10985 3000 10385 3000
-Wire Wire Line
-	10985 3100 10385 3100
-Wire Wire Line
-	10985 3250 10385 3250
-Wire Wire Line
-	10985 3350 10385 3350
-Wire Wire Line
-	10985 4200 10385 4200
-Wire Wire Line
-	10985 4300 10385 4300
-Wire Wire Line
-	10985 4450 10385 4450
-Wire Wire Line
-	10985 4550 10385 4550
-Wire Wire Line
-	10985 4700 10385 4700
-Wire Wire Line
-	10985 4800 10385 4800
-Wire Wire Line
-	10985 4950 10385 4950
-Wire Wire Line
-	10985 5050 10385 5050
-Wire Wire Line
-	12485 2550 12935 2550
-Wire Wire Line
-	12485 2800 12935 2800
-Wire Wire Line
-	12485 3050 12935 3050
-Wire Wire Line
-	12485 3300 12935 3300
-Wire Wire Line
-	12485 4250 12935 4250
-Wire Wire Line
-	12485 4500 12935 4500
-Wire Wire Line
-	12485 4750 12935 4750
-Wire Wire Line
-	12485 5000 12935 5000
-Text Label 10285 2250 3    60   ~ 0
-C16AddressBus
-Text Label 10585 3500 0    60   ~ 0
-sel
-Text Label 10585 5200 0    60   ~ 0
-sel
-Wire Wire Line
-	10185 3500 10185 5200
-Connection ~ 10185 3500
-Wire Wire Line
-	10185 3500 9970 3500
-Text GLabel 9970 3500 0    50   Input ~ 0
-MUX
-Wire Bus Line
-	10285 2250 9970 2250
-Text GLabel 9970 2250 0    50   Input ~ 0
-a[0..15]
-$Comp
-L power:GND #PWR?
-U 1 1 63A64613
-P 10735 3700
-AR Path="/63A64613" Ref="#PWR?"  Part="1" 
-AR Path="/62E48B71/63A64613" Ref="#PWR?"  Part="1" 
-AR Path="/63A22C28/63A64613" Ref="#PWR012"  Part="1" 
-F 0 "#PWR012" H 10735 3450 50  0001 C CNN
-F 1 "GND" H 10740 3527 50  0000 C CNN
-F 2 "" H 10735 3700 50  0001 C CNN
-F 3 "" H 10735 3700 50  0001 C CNN
-	1    10735 3700
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 63A64619
-P 10735 5400
-AR Path="/63A64619" Ref="#PWR?"  Part="1" 
-AR Path="/62E48B71/63A64619" Ref="#PWR?"  Part="1" 
-AR Path="/63A22C28/63A64619" Ref="#PWR014"  Part="1" 
-F 0 "#PWR014" H 10735 5150 50  0001 C CNN
-F 1 "GND" H 10740 5227 50  0000 C CNN
-F 2 "" H 10735 5400 50  0001 C CNN
-F 3 "" H 10735 5400 50  0001 C CNN
-	1    10735 5400
-	1    0    0    -1  
-$EndComp
-Text Label 10585 4550 0    60   ~ 0
-a5
-Text Label 10585 4300 0    60   ~ 0
-a4
-Wire Bus Line
-	13035 2450 14120 2450
-Text Label 13035 2450 0    60   ~ 0
-MultiplexedAddressBus
 Wire Wire Line
 	4415 3360 4415 3460
 Wire Wire Line
@@ -254,116 +45,6 @@ F 1 "GND" H 4420 3287 50  0000 C CNN
 F 2 "" H 4415 3460 50  0001 C CNN
 F 3 "" H 4415 3460 50  0001 C CNN
 	1    4415 3460
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74ls257:74LS257 U?
-U 1 1 63A64692
-P 11735 4750
-AR Path="/63A64692" Ref="U?"  Part="1" 
-AR Path="/62E48B71/63A64692" Ref="U?"  Part="1" 
-AR Path="/63A22C28/63A64692" Ref="U6"  Part="1" 
-F 0 "U6" H 11785 4900 50  0000 C CNN
-F 1 "74HCT257" H 11785 4600 50  0000 C CNN
-F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 11735 4750 50  0001 C CNN
-F 3 "" H 11735 4750 50  0001 C CNN
-	1    11735 4750
-	1    0    0    -1  
-$EndComp
-$Comp
-L 74ls257:74LS257 U?
-U 1 1 63A64698
-P 11735 3050
-AR Path="/63A64698" Ref="U?"  Part="1" 
-AR Path="/62E48B71/63A64698" Ref="U?"  Part="1" 
-AR Path="/63A22C28/63A64698" Ref="U5"  Part="1" 
-F 0 "U5" H 11785 3200 50  0000 C CNN
-F 1 "74HCT257" H 11785 2900 50  0000 C CNN
-F 2 "Package_SO:SOIC-16_3.9x9.9mm_P1.27mm" H 11735 3050 50  0001 C CNN
-F 3 "" H 11735 3050 50  0001 C CNN
-	1    11735 3050
-	1    0    0    -1  
-$EndComp
-Text GLabel 7585 3560 2    50   Input ~ 0
-AEC
-Text GLabel 14120 2450 2    50   Output ~ 0
-m[0..8]
-$Comp
-L Device:C C?
-U 1 1 63A6467E
-P 13485 4655
-AR Path="/63A6467E" Ref="C?"  Part="1" 
-AR Path="/62E48B71/63A6467E" Ref="C?"  Part="1" 
-AR Path="/63A22C28/63A6467E" Ref="C6"  Part="1" 
-F 0 "C6" H 13600 4701 50  0000 L CNN
-F 1 "100n" H 13600 4610 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 13523 4505 50  0001 C CNN
-F 3 "~" H 13485 4655 50  0001 C CNN
-	1    13485 4655
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR?
-U 1 1 63A64672
-P 13485 4905
-AR Path="/63A64672" Ref="#PWR?"  Part="1" 
-AR Path="/62E48B71/63A64672" Ref="#PWR?"  Part="1" 
-AR Path="/63A22C28/63A64672" Ref="#PWR020"  Part="1" 
-F 0 "#PWR020" H 13485 4655 50  0001 C CNN
-F 1 "GND" H 13485 4755 50  0000 C CNN
-F 2 "" H 13485 4905 50  0001 C CNN
-F 3 "" H 13485 4905 50  0001 C CNN
-	1    13485 4905
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	13485 4505 13485 4405
-Wire Wire Line
-	13485 4805 13485 4905
-Wire Wire Line
-	13485 2785 13485 2870
-$Comp
-L power:+5V #PWR?
-U 1 1 63A64661
-P 13485 2785
-AR Path="/63A64661" Ref="#PWR?"  Part="1" 
-AR Path="/62E48B71/63A64661" Ref="#PWR?"  Part="1" 
-AR Path="/63A22C28/63A64661" Ref="#PWR025"  Part="1" 
-F 0 "#PWR025" H 13485 2635 50  0001 C CNN
-F 1 "+5V" H 13500 2958 50  0000 C CNN
-F 2 "" H 13485 2785 50  0001 C CNN
-F 3 "" H 13485 2785 50  0001 C CNN
-	1    13485 2785
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	13485 3235 13485 3170
-$Comp
-L power:GND #PWR?
-U 1 1 63A6465A
-P 13485 3235
-AR Path="/63A6465A" Ref="#PWR?"  Part="1" 
-AR Path="/62E48B71/63A6465A" Ref="#PWR?"  Part="1" 
-AR Path="/63A22C28/63A6465A" Ref="#PWR026"  Part="1" 
-F 0 "#PWR026" H 13485 2985 50  0001 C CNN
-F 1 "GND" H 13490 3062 50  0000 C CNN
-F 2 "" H 13485 3235 50  0001 C CNN
-F 3 "" H 13485 3235 50  0001 C CNN
-	1    13485 3235
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:C C?
-U 1 1 63A64654
-P 13485 3020
-AR Path="/63A64654" Ref="C?"  Part="1" 
-AR Path="/62E48B71/63A64654" Ref="C?"  Part="1" 
-AR Path="/63A22C28/63A64654" Ref="C5"  Part="1" 
-F 0 "C5" H 13600 3066 50  0000 L CNN
-F 1 "100n" H 13600 2975 50  0000 L CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 13523 2870 50  0001 C CNN
-F 3 "~" H 13485 3020 50  0001 C CNN
-	1    13485 3020
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -410,10 +91,6 @@ F 3 "" H 4590 5430 50  0001 C CNN
 $EndComp
 Text Notes 5020 8135 0    50   ~ 0
 THE 6529B IS HARD TO FIND THESE DAYS, SO A REPLACEMENT\nSHOULD BE FOUND. MANY CHIPS SEEM SUITABLE BUT THEY ALL\nLACK THE ABILITY TO PRESET THEIR OUTPUTS TO HIGH, WHICH\nIS ESSENTIAL FOR HOW THIS EXPANSION WORKS, SO WE MUST\nRESORT TO SOME TRICK...\n\nTHERE IS NO NEED FOR OPEN-COLLECTOR OUTPUTS.
-Wire Wire Line
-	5495 3660 5605 3660
-Text GLabel 5495 3660 0    50   Input ~ 0
-MUX
 $Comp
 L power:+5V #PWR?
 U 1 1 640F5993
@@ -475,12 +152,10 @@ F 3 "DOCUMENTATION" H 6355 3310 50  0001 C CNN
 	1    6355 3310
 	1    0    0    -1  
 $EndComp
-Text GLabel 7210 3060 2    50   Output ~ 0
+Text GLabel 7730 2960 2    50   Output ~ 0
 ~CS_OUT
 Text GLabel 5550 3160 0    50   Input ~ 0
 ~CS_IN
-Wire Bus Line
-	4535 2250 5090 2250
 Entry Wire Line
 	5090 2860 5190 2960
 Entry Wire Line
@@ -488,7 +163,7 @@ Entry Wire Line
 Entry Wire Line
 	5090 2660 5190 2760
 Text GLabel 4535 2250 0    50   Input ~ 0
-a[0..15]
+a[0..18]
 $Comp
 L power:GND #PWR?
 U 1 1 63A644D4
@@ -503,8 +178,6 @@ F 3 "" H 5475 3975 50  0001 C CNN
 	1    5475 3975
 	1    0    0    -1  
 $EndComp
-Wire Wire Line
-	7105 3060 7210 3060
 Text Label 5190 2960 0    50   ~ 0
 a2
 Wire Wire Line
@@ -521,16 +194,6 @@ Text Label 5190 3060 0    50   ~ 0
 a3
 Wire Wire Line
 	5605 3060 5190 3060
-Text Label 12485 5855 0    60   ~ 0
-m8
-Entry Wire Line
-	13035 5755 12935 5855
-Wire Wire Line
-	7105 3160 9570 3160
-Wire Wire Line
-	9570 3160 9570 5855
-Wire Wire Line
-	9570 5855 12935 5855
 Wire Wire Line
 	5190 3760 5605 3760
 Wire Wire Line
@@ -540,7 +203,7 @@ Wire Wire Line
 Wire Wire Line
 	7105 3660 7490 3660
 Wire Wire Line
-	7105 2960 7490 2960
+	7105 2960 7730 2960
 Text Notes 5730 4270 0    50   ~ 0
 ALL THE GLUE LOGIC WAS REPLACED\nWITH A SINGLE OLD-SKOOLZ GAL!
 $Comp
@@ -557,63 +220,14 @@ F 3 "" H 4415 2960 50  0001 C CNN
 	1    4415 2960
 	1    0    0    -1  
 $EndComp
-$Comp
-L power:+5V #PWR?
-U 1 1 633D9554
-P 13485 4405
-AR Path="/633D9554" Ref="#PWR?"  Part="1" 
-AR Path="/62E48B71/633D9554" Ref="#PWR?"  Part="1" 
-AR Path="/63A22C28/633D9554" Ref="#PWR0107"  Part="1" 
-F 0 "#PWR0107" H 13485 4255 50  0001 C CNN
-F 1 "+5V" H 13500 4578 50  0000 C CNN
-F 2 "" H 13485 4405 50  0001 C CNN
-F 3 "" H 13485 4405 50  0001 C CNN
-	1    13485 4405
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:+5V #PWR?
-U 1 1 633E34D2
-P 13485 3790
-AR Path="/633E34D2" Ref="#PWR?"  Part="1" 
-AR Path="/62E48B71/633E34D2" Ref="#PWR?"  Part="1" 
-AR Path="/63A22C28/633E34D2" Ref="#PWR0108"  Part="1" 
-F 0 "#PWR0108" H 13485 3640 50  0001 C CNN
-F 1 "+5V" H 13500 3963 50  0000 C CNN
-F 2 "" H 13485 3790 50  0001 C CNN
-F 3 "" H 13485 3790 50  0001 C CNN
-	1    13485 3790
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:VCC #PWR0109
-U 1 1 633E54A0
-P 13855 3790
-F 0 "#PWR0109" H 13855 3640 50  0001 C CNN
-F 1 "VCC" H 13870 3963 50  0000 C CNN
-F 2 "" H 13855 3790 50  0001 C CNN
-F 3 "" H 13855 3790 50  0001 C CNN
-	1    13855 3790
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	13855 3790 13855 3890
-Wire Wire Line
-	13855 3890 13485 3890
-Wire Wire Line
-	13485 3890 13485 3790
-Text Notes 11270 3905 0    50   ~ 0
-'157s WILL BE FINE, TOO
 Wire Wire Line
 	7105 2860 7345 2860
 Wire Wire Line
 	7345 2860 7345 2760
 Wire Wire Line
-	7345 2760 7585 2760
-Text GLabel 7585 2760 2    50   Input ~ 0
+	7345 2760 7825 2760
+Text GLabel 7825 2760 2    50   Input ~ 0
 R_~W
-Text Notes 7850 2815 0    50   ~ 0
-R/~W~ WAS NOT USED IN THE ORIGINAL\nHANNES/SOLDER CIRCUIT BUT WE NEED IT\nIN ORDER TO KNOW WHETHER TO ENABLE\nTHE 74x74 OR THE 74x245.
 Text Label 12340 7695 2    50   ~ 0
 d7
 Entry Wire Line
@@ -706,15 +320,15 @@ F 3 "" H 11575 8380 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	7105 3260 7490 3260
-Text Label 7490 3260 2    50   ~ 0
+Text Label 7490 3060 2    50   ~ 0
 ~cs_ramrd
 Text Label 10560 7995 0    50   ~ 0
 ~cs_ramrd
 Text Notes 10595 9015 0    50   ~ 0
 WE ALSO NEED SOMETHING ELSE TO ALLOW OUR\nRAM CONTROL REGISTER TO BE READ BACK. SINCE\nWE ARE WORKING WITH REVERSE LOGIC, WE USE\nAN INVERTING BUFFER AND... TA-DA!
-Text Notes 6085 2300 0    50   ~ 0
+Text Notes 6085 2520 2    50   ~ 0
 GAL22V10 CAN BE\nUSED AS WELL
-Text Notes 7600 3260 0    50   ~ 0
+Text Notes 8095 3060 0    50   ~ 0
 $FD16 READ
 Wire Wire Line
 	11075 7595 10560 7595
@@ -879,9 +493,9 @@ p1
 Text Label 5190 3760 0    50   ~ 0
 p0
 Text Label 7490 3760 2    50   ~ 0
-p6
+p2
 Text Label 7490 3660 2    50   ~ 0
-p7
+p6
 Entry Wire Line
 	7490 3660 7590 3760
 Entry Wire Line
@@ -897,15 +511,12 @@ Wire Bus Line
 Wire Bus Line
 	4540 4535 5090 4535
 Text GLabel 4540 4535 0    50   Input ~ 0
-~p~[0..7]
+p[0..7]
 Connection ~ 5090 4535
 Wire Bus Line
 	5090 4535 5095 4535
-Text Notes 7600 3490 0    50   ~ 0
-INTERMEDIATE SIGNAL TO WORKAROUND\nGAL LIMITATIONS - LEAVE UNCONNECTED
 Wire Wire Line
 	7105 3460 7490 3460
-NoConn ~ 7490 3460
 Wire Wire Line
 	4590 5430 4590 5635
 Wire Wire Line
@@ -1000,7 +611,7 @@ Wire Wire Line
 Wire Wire Line
 	2905 7350 2905 7675
 Wire Wire Line
-	3020 7550 2455 7550
+	3020 7550 2625 7550
 Wire Wire Line
 	3020 7150 2730 7150
 NoConn ~ 4020 7350
@@ -1012,8 +623,8 @@ Wire Wire Line
 	4990 7150 4020 7150
 Text GLabel 2730 7150 0    50   Input ~ 0
 ~RESET
-Text Label 2455 7550 0    50   ~ 0
-~cs_ramwr
+Text Label 1455 7550 0    50   ~ 0
+cs_ramwr
 Text Notes 3095 8545 0    50   ~ 0
 BISTABLE CONFIGURATION
 Wire Wire Line
@@ -1211,57 +822,283 @@ Wire Wire Line
 $Comp
 L Device:C C?
 U 1 1 63FFE9A0
-P 2150 7325
+P 4650 7845
 AR Path="/63FFE9A0" Ref="C?"  Part="1" 
 AR Path="/62E48B71/63FFE9A0" Ref="C?"  Part="1" 
 AR Path="/63A22C28/63FFE9A0" Ref="C15"  Part="1" 
-F 0 "C15" H 2035 7371 50  0000 R CNN
-F 1 "100n" H 2035 7280 50  0000 R CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 2188 7175 50  0001 C CNN
-F 3 "~" H 2150 7325 50  0001 C CNN
-	1    2150 7325
+F 0 "C15" H 4535 7891 50  0000 R CNN
+F 1 "100n" H 4535 7800 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 4688 7695 50  0001 C CNN
+F 3 "~" H 4650 7845 50  0001 C CNN
+	1    4650 7845
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 63FFED00
-P 2150 7660
+P 4650 8180
 AR Path="/63FFED00" Ref="#PWR?"  Part="1" 
 AR Path="/62E48B71/63FFED00" Ref="#PWR?"  Part="1" 
 AR Path="/63A22C28/63FFED00" Ref="#PWR0117"  Part="1" 
-F 0 "#PWR0117" H 2150 7410 50  0001 C CNN
-F 1 "GND" H 2155 7487 50  0000 C CNN
-F 2 "" H 2150 7660 50  0001 C CNN
-F 3 "" H 2150 7660 50  0001 C CNN
-	1    2150 7660
+F 0 "#PWR0117" H 4650 7930 50  0001 C CNN
+F 1 "GND" H 4655 8007 50  0000 C CNN
+F 2 "" H 4650 8180 50  0001 C CNN
+F 3 "" H 4650 8180 50  0001 C CNN
+	1    4650 8180
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:+5V #PWR?
 U 1 1 63FFED0A
-P 2150 6970
+P 4650 7490
 AR Path="/63FFED0A" Ref="#PWR?"  Part="1" 
 AR Path="/62E48B71/63FFED0A" Ref="#PWR?"  Part="1" 
 AR Path="/63A22C28/63FFED0A" Ref="#PWR0118"  Part="1" 
-F 0 "#PWR0118" H 2150 6820 50  0001 C CNN
-F 1 "+5V" H 2165 7143 50  0000 C CNN
-F 2 "" H 2150 6970 50  0001 C CNN
-F 3 "" H 2150 6970 50  0001 C CNN
-	1    2150 6970
+F 0 "#PWR0118" H 4650 7340 50  0001 C CNN
+F 1 "+5V" H 4665 7663 50  0000 C CNN
+F 2 "" H 4650 7490 50  0001 C CNN
+F 3 "" H 4650 7490 50  0001 C CNN
+	1    4650 7490
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2150 6970 2150 7175
+	4650 7490 4650 7695
 Wire Wire Line
-	2150 7475 2150 7660
-Text Label 7490 2960 2    50   ~ 0
-~cs_ramwr
+	4650 7995 4650 8180
 Wire Wire Line
 	7105 3360 7490 3360
-Text Label 7490 3360 2    50   ~ 0
+Text Label 7490 3160 2    50   ~ 0
 cs_ramwr
+Text Notes 8090 2815 0    50   ~ 0
+R/~W~ WAS NOT USED IN THE ORIGINAL\nHANNES/SOLDER CIRCUIT BUT WE NEED IT\nIN ORDER TO KNOW WHETHER TO ENABLE\nU3 OR U4.
+Text GLabel 5125 3660 0    50   Input ~ 0
+AEC
+Wire Wire Line
+	5605 3660 5125 3660
+$Comp
+L 74xx:74HCT02 U?
+U 1 1 641A3A28
+P 7315 9925
+AR Path="/62E48B71/641A3A28" Ref="U?"  Part="1" 
+AR Path="/63A22C28/641A3A28" Ref="U5"  Part="1" 
+F 0 "U5" H 7315 10250 50  0000 C CNN
+F 1 "74HCT02" H 7315 10159 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 7315 9925 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hct02" H 7315 9925 50  0001 C CNN
+	1    7315 9925
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HCT02 U?
+U 2 1 641A3A2E
+P 6460 9925
+AR Path="/62E48B71/641A3A2E" Ref="U?"  Part="2" 
+AR Path="/63A22C28/641A3A2E" Ref="U5"  Part="2" 
+F 0 "U5" H 6460 10250 50  0000 C CNN
+F 1 "74HCT02" H 6460 10159 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 6460 9925 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hct02" H 6460 9925 50  0001 C CNN
+	2    6460 9925
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HCT02 U?
+U 3 1 641A3A34
+P 5400 9825
+AR Path="/62E48B71/641A3A34" Ref="U?"  Part="3" 
+AR Path="/63A22C28/641A3A34" Ref="U5"  Part="3" 
+F 0 "U5" H 5400 10150 50  0000 C CNN
+F 1 "74HCT02" H 5400 10059 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 5400 9825 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hct02" H 5400 9825 50  0001 C CNN
+	3    5400 9825
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xx:74HCT02 U?
+U 5 1 641A3A40
+P 845 10205
+AR Path="/62E48B71/641A3A40" Ref="U?"  Part="5" 
+AR Path="/63A22C28/641A3A40" Ref="U5"  Part="5" 
+F 0 "U5" H 1075 10251 50  0000 L CNN
+F 1 "74HCT02" H 1075 10160 50  0000 L CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 845 10205 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hct02" H 845 10205 50  0001 C CNN
+	5    845  10205
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 641A3A46
+P 1680 10200
+AR Path="/641A3A46" Ref="C?"  Part="1" 
+AR Path="/62E48B71/641A3A46" Ref="C?"  Part="1" 
+AR Path="/63A22C28/641A3A46" Ref="C1"  Part="1" 
+F 0 "C1" H 1795 10246 50  0000 L CNN
+F 1 "100n" H 1795 10155 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder" H 1718 10050 50  0001 C CNN
+F 3 "~" H 1680 10200 50  0001 C CNN
+	1    1680 10200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 641A3A4C
+P 1270 10955
+AR Path="/641A3A4C" Ref="#PWR?"  Part="1" 
+AR Path="/62E48B71/641A3A4C" Ref="#PWR?"  Part="1" 
+AR Path="/63A22C28/641A3A4C" Ref="#PWR0107"  Part="1" 
+F 0 "#PWR0107" H 1270 10705 50  0001 C CNN
+F 1 "GND" H 1270 10805 50  0000 C CNN
+F 2 "" H 1270 10955 50  0001 C CNN
+F 3 "" H 1270 10955 50  0001 C CNN
+	1    1270 10955
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1270 9590 1270 9490
+Wire Wire Line
+	1270 10855 1270 10955
+$Comp
+L power:+5V #PWR?
+U 1 1 641A3A54
+P 1270 9490
+AR Path="/641A3A54" Ref="#PWR?"  Part="1" 
+AR Path="/62E48B71/641A3A54" Ref="#PWR?"  Part="1" 
+AR Path="/63A22C28/641A3A54" Ref="#PWR0108"  Part="1" 
+F 0 "#PWR0108" H 1270 9340 50  0001 C CNN
+F 1 "+5V" H 1285 9663 50  0000 C CNN
+F 2 "" H 1270 9490 50  0001 C CNN
+F 3 "" H 1270 9490 50  0001 C CNN
+	1    1270 9490
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	845  9705 845  9590
+Wire Wire Line
+	845  9590 1270 9590
+Wire Wire Line
+	1680 9590 1680 10050
+Wire Wire Line
+	1680 10350 1680 10855
+Wire Wire Line
+	1680 10855 1270 10855
+Wire Wire Line
+	845  10855 845  10705
+Connection ~ 1270 10855
+Wire Wire Line
+	1270 10855 845  10855
+Connection ~ 1270 9590
+Wire Wire Line
+	1270 9590 1680 9590
+Wire Wire Line
+	5100 9725 4885 9725
+Wire Wire Line
+	5100 9925 4885 9925
+Wire Wire Line
+	5700 9825 6160 9825
+Text GLabel 4885 9925 0    50   Input ~ 0
+R_~W
+Text GLabel 4885 9725 0    50   Input ~ 0
+CLKOUT
+Wire Wire Line
+	6160 10025 5940 10025
+Text GLabel 5940 10025 0    50   Input ~ 0
+~CAS_64K
+Wire Wire Line
+	6760 9925 6900 9925
+Wire Wire Line
+	6900 9925 6900 9825
+Wire Wire Line
+	6900 9825 7015 9825
+Wire Wire Line
+	6900 9925 6900 10025
+Wire Wire Line
+	6900 10025 7015 10025
+Connection ~ 6900 9925
+Wire Wire Line
+	7615 9925 7850 9925
+Text Notes 5755 10545 0    50   ~ 0
+THIS CIRCUIT WAS DERIVED\nFROM WORK BY ESLAPION
+$Comp
+L 74xx:74HCT02 U?
+U 4 1 641A3A3A
+P 2325 7550
+AR Path="/62E48B71/641A3A3A" Ref="U?"  Part="4" 
+AR Path="/63A22C28/641A3A3A" Ref="U5"  Part="4" 
+F 0 "U5" H 2325 7875 50  0000 C CNN
+F 1 "74HCT02" H 2325 7784 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 2325 7550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hct02" H 2325 7550 50  0001 C CNN
+	4    2325 7550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2025 7450 1890 7450
+Wire Wire Line
+	1890 7450 1890 7550
+Wire Wire Line
+	1890 7650 2025 7650
+Wire Wire Line
+	1890 7550 1455 7550
+Connection ~ 1890 7550
+Wire Wire Line
+	1890 7550 1890 7650
+Text Notes 8095 3160 0    50   ~ 0
+$FD16 WRITE (NOTE: ACTIVE *HIGH*!)
+Wire Wire Line
+	7105 3560 7490 3560
+Text Label 7490 3560 2    50   ~ 0
+p7
+Entry Wire Line
+	7490 3560 7590 3660
+Wire Wire Line
+	7105 3160 7490 3160
+Wire Wire Line
+	7105 3060 7490 3060
+Text Label 7490 3260 2    50   ~ 0
+a16
+Text Label 7490 3360 2    50   ~ 0
+a17
+Text Label 7490 3460 2    50   ~ 0
+a18
+Entry Wire Line
+	7490 3260 7590 3160
+Entry Wire Line
+	7490 3360 7590 3260
+Entry Wire Line
+	7490 3460 7590 3360
 Wire Bus Line
-	7590 3760 7590 4535
+	4535 2250 5090 2250
+Connection ~ 5090 2250
+Wire Bus Line
+	5090 2250 7590 2250
+Entry Wire Line
+	10560 7695 10460 7595
+Entry Wire Line
+	10560 7495 10460 7395
+Entry Wire Line
+	10560 7295 10460 7195
+Entry Wire Line
+	10560 7095 10460 6995
+Entry Wire Line
+	10560 7595 10460 7495
+Entry Wire Line
+	10560 7395 10460 7295
+Entry Wire Line
+	10560 7195 10460 7095
+Wire Bus Line
+	10460 6895 10130 6895
+Text GLabel 10130 6895 0    50   Input ~ 0
+p[0..7]
+Entry Wire Line
+	10560 6995 10460 6895
+Text GLabel 7850 9925 2    50   Output ~ 0
+~SRAM_CE
+Wire Bus Line
+	7590 2250 7590 3360
+Wire Bus Line
+	7590 3660 7590 4535
 Wire Bus Line
 	12440 7095 12440 7795
 Wire Bus Line
@@ -1269,9 +1106,7 @@ Wire Bus Line
 Wire Bus Line
 	7925 5865 7925 6565
 Wire Bus Line
+	10460 6895 10460 7595
+Wire Bus Line
 	5090 2250 5090 3460
-Wire Bus Line
-	13035 2450 13035 5755
-Wire Bus Line
-	10285 2250 10285 4950
 $EndSCHEMATC

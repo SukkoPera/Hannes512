@@ -5,8 +5,8 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 3
 Title "Hannes256: C16/+4 256 kB RAM Expansion"
-Date "2022-11-03"
-Rev "1git"
+Date "2023-02-21"
+Rev "3git"
 Comp "SukkoPera"
 Comment1 "Hannes Version (Update 1 with \"TED Feature\")"
 Comment2 "Based on drawings by Solder/Synergy"
@@ -456,46 +456,13 @@ Wire Wire Line
 Wire Wire Line
 	7925 5285 8465 5285
 Wire Wire Line
-	12165 3820 11850 3820
-Wire Wire Line
-	12165 3920 12045 3920
-Text Label 11850 3820 0    50   ~ 0
-~cas
-$Comp
-L Connector:Conn_01x03_Male J?
-U 1 1 63918991
-P 12365 3820
-AR Path="/62E48B71/63918991" Ref="J?"  Part="1" 
-AR Path="/63918991" Ref="J2"  Part="1" 
-F 0 "J2" H 12337 3844 50  0000 R CNN
-F 1 "RAM_SELECTOR" H 12337 3753 50  0000 R CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 12365 3820 50  0001 C CNN
-F 3 "~" H 12365 3820 50  0001 C CNN
-	1    12365 3820
-	-1   0    0    -1  
-$EndComp
-Text Label 11330 3720 0    50   ~ 0
-~cas_16k
-Text GLabel 11475 4060 2    50   Output ~ 0
-~CAS_64K
-Wire Wire Line
-	11600 4640 11915 4640
-Wire Wire Line
 	11600 4840 11915 4840
 Wire Wire Line
 	11600 5040 11915 5040
 Text Label 11600 4840 0    50   ~ 0
 r~w
-Text Label 11600 5040 0    50   ~ 0
-mux
-Text Label 11600 4640 0    50   ~ 0
-~ras
-Text GLabel 11915 4640 2    50   Output ~ 0
-~RAS
 Text GLabel 11915 4840 2    50   Output ~ 0
 R_~W
-Text GLabel 11915 5040 2    50   Output ~ 0
-MUX
 Entry Wire Line
 	10325 2985 10425 3085
 Entry Wire Line
@@ -534,7 +501,7 @@ Wire Bus Line
 	10425 2375 10625 2375
 Connection ~ 10425 2375
 Text GLabel 10625 2375 2    50   Output ~ 0
-a[0..15]
+a[0..18]
 Entry Wire Line
 	10325 4585 10425 4685
 Entry Wire Line
@@ -555,59 +522,6 @@ Wire Bus Line
 	10425 5600 10625 5600
 Text GLabel 10620 5600 2    50   BiDi ~ 0
 d[0..7]
-$Comp
-L Device:R R?
-U 1 1 639189C0
-P 12045 3445
-AR Path="/62E48B71/639189C0" Ref="R?"  Part="1" 
-AR Path="/639189C0" Ref="R2"  Part="1" 
-F 0 "R2" H 12115 3491 50  0000 L CNN
-F 1 "10k" H 12115 3400 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 11975 3445 50  0001 C CNN
-F 3 "~" H 12045 3445 50  0001 C CNN
-	1    12045 3445
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R?
-U 1 1 639189C6
-P 11755 3445
-AR Path="/62E48B71/639189C6" Ref="R?"  Part="1" 
-AR Path="/639189C6" Ref="R1"  Part="1" 
-F 0 "R1" H 11825 3491 50  0000 L CNN
-F 1 "10k" H 11825 3400 50  0000 L CNN
-F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 11685 3445 50  0001 C CNN
-F 3 "~" H 11755 3445 50  0001 C CNN
-	1    11755 3445
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	11330 3720 11755 3720
-Wire Wire Line
-	11755 3595 11755 3720
-Connection ~ 11755 3720
-Wire Wire Line
-	11755 3720 12165 3720
-Wire Wire Line
-	12045 3595 12045 3920
-Wire Wire Line
-	11755 3295 11755 3190
-Wire Wire Line
-	11755 3190 11900 3190
-Wire Wire Line
-	12045 3190 12045 3295
-Wire Wire Line
-	11900 3190 11900 3105
-Connection ~ 11900 3190
-Wire Wire Line
-	11900 3190 12045 3190
-Wire Wire Line
-	11330 3920 12045 3920
-Wire Wire Line
-	11330 3920 11330 4060
-Wire Wire Line
-	11330 4060 11475 4060
-Connection ~ 12045 3920
 $Sheet
 S 8175 7985 1130 600 
 U 63A22C28
@@ -670,17 +584,6 @@ F 3 "" H 7830 2630 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:+5V #PWR0105
-U 1 1 633D56E2
-P 11900 3105
-F 0 "#PWR0105" H 11900 2955 50  0001 C CNN
-F 1 "+5V" H 11915 3278 50  0000 C CNN
-F 2 "" H 11900 3105 50  0001 C CNN
-F 3 "" H 11900 3105 50  0001 C CNN
-	1    11900 3105
-	1    0    0    -1  
-$EndComp
-$Comp
 L void:Void V0
 U 1 1 63C4EC1B
 P 15540 9765
@@ -691,6 +594,97 @@ F 3 "" H 15540 9765 50  0001 C CNN
 	1    15540 9765
 	1    0    0    -1  
 $EndComp
+Wire Wire Line
+	11755 3295 11755 3190
+Wire Wire Line
+	11755 3595 11755 3720
+Wire Wire Line
+	11330 3720 11755 3720
+$Comp
+L Device:R R?
+U 1 1 639189C6
+P 11755 3445
+AR Path="/62E48B71/639189C6" Ref="R?"  Part="1" 
+AR Path="/639189C6" Ref="R1"  Part="1" 
+F 0 "R1" H 11825 3491 50  0000 L CNN
+F 1 "10k" H 11825 3400 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 11685 3445 50  0001 C CNN
+F 3 "~" H 11755 3445 50  0001 C CNN
+	1    11755 3445
+	1    0    0    -1  
+$EndComp
+Text Label 11330 3720 0    50   ~ 0
+~cas_16k
+Wire Wire Line
+	11900 3190 11900 3105
+Wire Wire Line
+	11755 3190 11900 3190
+$Comp
+L power:+5V #PWR0105
+U 1 1 633D56E2
+P 11900 3105
+F 0 "#PWR0105" H 11900 2955 50  0001 C CNN
+F 1 "+5V" H 11915 3278 50  0000 C CNN
+F 2 "" H 11900 3105 50  0001 C CNN
+F 3 "" H 11900 3105 50  0001 C CNN
+	1    11900 3105
+	1    0    0    -1  
+$EndComp
+Connection ~ 11900 3190
+Connection ~ 11755 3720
+Wire Wire Line
+	11900 3190 12045 3190
+Wire Wire Line
+	12045 3190 12045 3295
+Wire Wire Line
+	12045 3595 12045 3920
+Wire Wire Line
+	11755 3720 12165 3720
+$Comp
+L Device:R R?
+U 1 1 639189C0
+P 12045 3445
+AR Path="/62E48B71/639189C0" Ref="R?"  Part="1" 
+AR Path="/639189C0" Ref="R2"  Part="1" 
+F 0 "R2" H 12115 3491 50  0000 L CNN
+F 1 "10k" H 12115 3400 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" V 11975 3445 50  0001 C CNN
+F 3 "~" H 12045 3445 50  0001 C CNN
+	1    12045 3445
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male J?
+U 1 1 63918991
+P 12365 3820
+AR Path="/62E48B71/63918991" Ref="J?"  Part="1" 
+AR Path="/63918991" Ref="J2"  Part="1" 
+F 0 "J2" H 12337 3844 50  0000 R CNN
+F 1 "RAM_SELECTOR" H 12337 3753 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 12365 3820 50  0001 C CNN
+F 3 "~" H 12365 3820 50  0001 C CNN
+	1    12365 3820
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	12165 3920 12045 3920
+Wire Wire Line
+	12165 3820 11850 3820
+Text Label 11850 3820 0    50   ~ 0
+~cas
+Text GLabel 11915 5040 2    50   Output ~ 0
+CLKOUT
+Text Label 11600 5040 0    50   ~ 0
+clkout
+Wire Wire Line
+	11330 4060 11475 4060
+Wire Wire Line
+	11330 3920 11330 4060
+Connection ~ 12045 3920
+Wire Wire Line
+	11330 3920 12045 3920
+Text GLabel 11475 4060 2    50   Output ~ 0
+~CAS_64K
 Wire Bus Line
 	8005 2375 8005 3085
 Wire Bus Line

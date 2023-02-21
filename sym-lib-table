@@ -1,8 +1,7 @@
 (sym_lib_table
   (lib (name MOS_6529)(type Legacy)(uri ${KIPRJMOD}/lib/MOS_6529.lib)(options "")(descr ""))
-  (lib (name 74ls257)(type Legacy)(uri ${KIPRJMOD}/lib/74ls257.lib)(options "")(descr ""))
   (lib (name MOS_7360_TED)(type Legacy)(uri ${KIPRJMOD}/lib/MOS_7360_TED.lib)(options "")(descr ""))
   (lib (name GAL20V8)(type Legacy)(uri ${KIPRJMOD}/lib/GAL20V8.lib)(options "")(descr ""))
-  (lib (name 41256)(type Legacy)(uri ${KIPRJMOD}/lib/41256.lib)(options "")(descr ""))
   (lib (name void)(type Legacy)(uri ${KIPRJMOD}/lib/void.lib)(options "")(descr ""))
+  (lib (name AS6C4008)(type Legacy)(uri ${KIPRJMOD}/lib/AS6C4008.lib)(options "")(descr ""))
 )
