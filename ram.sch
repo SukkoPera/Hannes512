@@ -264,15 +264,11 @@ Wire Bus Line
 Text GLabel 6275 5670 0    50   BiDi ~ 0
 d[0..7]
 Text Label 7340 4740 0    50   ~ 0
-d0
+d2
 Text Label 7340 4840 0    50   ~ 0
 d1
 Text Label 7340 4940 0    50   ~ 0
-d2
-Text Label 9730 4640 2    50   ~ 0
-d7
-Text Label 9730 4740 2    50   ~ 0
-d6
+d0
 Text Label 9730 4840 2    50   ~ 0
 d5
 Text Label 9730 4940 2    50   ~ 0
@@ -301,6 +297,10 @@ Wire Wire Line
 	9775 4440 9955 4440
 Wire Wire Line
 	9380 4540 9775 4540
+Text Label 9730 4040 2    50   ~ 0
+a6
+Text Label 9730 4240 2    50   ~ 0
+a4
 Wire Bus Line
 	7240 4640 7240 5670
 Wire Bus Line
@@ -309,8 +309,8 @@ Wire Bus Line
 	9830 2895 9830 4340
 Wire Bus Line
 	7240 2895 7240 4540
-Text Label 9730 4040 2    50   ~ 0
-a6
-Text Label 9730 4240 2    50   ~ 0
-a4
+Text Label 9730 4740 2    50   ~ 0
+d6
+Text Label 9730 4640 2    50   ~ 0
+d7
 $EndSCHEMATC
