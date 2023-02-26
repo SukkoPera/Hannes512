@@ -301,6 +301,10 @@ Text Label 9730 4040 2    50   ~ 0
 a6
 Text Label 9730 4240 2    50   ~ 0
 a4
+Text Label 9730 4740 2    50   ~ 0
+d6
+Text Label 9730 4640 2    50   ~ 0
+d7
 Wire Bus Line
 	7240 4640 7240 5670
 Wire Bus Line
@@ -309,8 +313,4 @@ Wire Bus Line
 	9830 2895 9830 4340
 Wire Bus Line
 	7240 2895 7240 4540
-Text Label 9730 4740 2    50   ~ 0
-d6
-Text Label 9730 4640 2    50   ~ 0
-d7
 $EndSCHEMATC

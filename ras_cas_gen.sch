@@ -179,19 +179,19 @@ F 3 "" H 5475 3975 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 5190 2960 0    50   ~ 0
-a2
+a3
 Wire Wire Line
 	5605 2960 5190 2960
 Text Label 5190 2860 0    50   ~ 0
-a1
+a2
 Wire Wire Line
 	5605 2860 5190 2860
 Text Label 5190 2760 0    50   ~ 0
-a0
+a1
 Wire Wire Line
 	5605 2760 5190 2760
 Text Label 5190 3060 0    50   ~ 0
-a3
+a0
 Wire Wire Line
 	5605 3060 5190 3060
 Wire Wire Line
@@ -491,9 +491,9 @@ p7
 Text Label 7490 3860 2    50   ~ 0
 p1
 Text Label 5190 3760 0    50   ~ 0
-p0
-Text Label 7490 3760 2    50   ~ 0
 p2
+Text Label 7490 3760 2    50   ~ 0
+p0
 Text Label 7490 3660 2    50   ~ 0
 p6
 Entry Wire Line

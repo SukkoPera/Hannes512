@@ -5,7 +5,7 @@ $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 3
 Title "Hannes256: C16/+4 256 kB RAM Expansion"
-Date "2023-02-21"
+Date "2023-02-27"
 Rev "3git"
 Comp "SukkoPera"
 Comment1 "Hannes Version (Update 1 with \"TED Feature\")"
@@ -584,12 +584,12 @@ F 3 "" H 7830 2630 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L void:Void V0
+L void:Void V1
 U 1 1 63C4EC1B
 P 15540 9765
-F 0 "V0" H 15618 9811 50  0000 L CNN
-F 1 "CC_LOGO" H 15618 9720 50  0000 L CNN
-F 2 "Hannes256:cc_by_nc_sa" H 15540 9765 50  0001 C CNN
+F 0 "V1" H 15618 9811 50  0000 L CNN
+F 1 "LOGO" H 15618 9720 50  0000 L CNN
+F 2 "Hannes256:logo" H 15540 9765 50  0001 C CNN
 F 3 "" H 15540 9765 50  0001 C CNN
 	1    15540 9765
 	1    0    0    -1  
@@ -691,4 +691,15 @@ Wire Bus Line
 	10425 4685 10425 5600
 Wire Bus Line
 	10425 2375 10425 4285
+$Comp
+L void:Void V0
+U 1 1 64911216
+P 15540 9560
+F 0 "V0" H 15618 9606 50  0000 L CNN
+F 1 "CC_LOGO" H 15618 9515 50  0000 L CNN
+F 2 "Hannes256:cc_by_nc_sa" H 15540 9560 50  0001 C CNN
+F 3 "" H 15540 9560 50  0001 C CNN
+	1    15540 9560
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
