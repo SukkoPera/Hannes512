@@ -1,4 +1,4 @@
-/* Hannes256 GAL Equations
+/* Hannes512 GAL Equations
  * Copyright 2022-2023 SukkoPera <software@sukkology.net>
  *
  * This program is free software: you can redistribute it and/or modify

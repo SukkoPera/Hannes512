@@ -4,14 +4,14 @@ EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
 Sheet 3 3
-Title "Hannes256: C16/+4 256 kB RAM Expansion"
+Title "Hannes512: C16/+4 512 kB RAM Expansion"
 Date "2023-02-21"
-Rev "3git"
+Rev "1git"
 Comp "SukkoPera"
 Comment1 "Hannes Version (Update 1 with \"TED Feature\")"
 Comment2 "Based on drawings by Solder/Synergy"
-Comment3 "Licensed under CC BY-NC-SA 4.0"
-Comment4 ""
+Comment3 "Thanks to TLC and eslapion!"
+Comment4 "Licensed under CC BY-NC-SA 4.0"
 $EndDescr
 Text Notes 15795 9665 2    50   ~ 0
 Update 1 adds a "TED Feature": the purpose of the change is to restrict\nTED access to RAM bank 3 when the 6th bit of the RAM register is cleared.\nIf bit 6 is HIGH, the current ram bank is retained during TED access. So:\n- U5 Bit6=0: CPU accesses current RAM, TED always accesses RAM bank 3\n- U5 Bit6=1: CPU accesses current RAM, TED accesses current RAM

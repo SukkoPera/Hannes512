@@ -4,14 +4,14 @@ EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
 Sheet 1 3
-Title "Hannes256: C16/+4 256 kB RAM Expansion"
+Title "Hannes512: C16/+4 512 kB RAM Expansion"
 Date "2023-02-27"
-Rev "3git"
+Rev "1git"
 Comp "SukkoPera"
 Comment1 "Hannes Version (Update 1 with \"TED Feature\")"
 Comment2 "Based on drawings by Solder/Synergy"
-Comment3 "Licensed under CC BY-NC-SA 4.0"
-Comment4 ""
+Comment3 "Thanks to TLC and eslapion!"
+Comment4 "Licensed under CC BY-NC-SA 4.0"
 $EndDescr
 $Sheet
 S 6220 7990 1230 595 
@@ -95,7 +95,7 @@ AR Path="/62E48B71/639188CC" Ref="J?"  Part="1"
 AR Path="/639188CC" Ref="J0"  Part="1" 
 F 0 "J0" H 9215 5650 50  0000 C CNN
 F 1 "TED_SOCKET" H 9215 5559 50  0000 C CNN
-F 2 "Hannes256:DIP-48_W15.24mm_LongPads_ModSilkS" H 9215 4135 50  0001 C CNN
+F 2 "Hannes512:DIP-48_W15.24mm_LongPads_ModSilkS" H 9215 4135 50  0001 C CNN
 F 3 "DOCUMENTATION" H 9215 4135 50  0001 C CNN
 	1    9215 4135
 	1    0    0    -1  
@@ -589,7 +589,7 @@ U 1 1 63C4EC1B
 P 15540 9765
 F 0 "V2" H 15618 9811 50  0000 L CNN
 F 1 "LOGO" H 15618 9720 50  0000 L CNN
-F 2 "Hannes256:logo" H 15540 9765 50  0001 C CNN
+F 2 "Hannes512:logo" H 15540 9765 50  0001 C CNN
 F 3 "" H 15540 9765 50  0001 C CNN
 	1    15540 9765
 	1    0    0    -1  
@@ -691,7 +691,7 @@ U 1 1 64911216
 P 15540 9560
 F 0 "V1" H 15618 9606 50  0000 L CNN
 F 1 "CC_LOGO" H 15618 9515 50  0000 L CNN
-F 2 "Hannes256:cc_by_nc_sa" H 15540 9560 50  0001 C CNN
+F 2 "Hannes512:cc_by_nc_sa" H 15540 9560 50  0001 C CNN
 F 3 "" H 15540 9560 50  0001 C CNN
 	1    15540 9560
 	1    0    0    -1  

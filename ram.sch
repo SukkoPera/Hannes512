@@ -4,14 +4,14 @@ EELAYER END
 $Descr A3 16535 11693
 encoding utf-8
 Sheet 2 3
-Title "Hannes256: C16/+4 256 kB RAM Expansion"
+Title "Hannes512: C16/+4 512 kB RAM Expansion"
 Date "2023-02-21"
-Rev "3git"
+Rev "1git"
 Comp "SukkoPera"
 Comment1 "Hannes Version (Update 1 with \"TED Feature\")"
 Comment2 "Based on drawings by Solder/Synergy"
-Comment3 "Licensed under CC BY-NC-SA 4.0"
-Comment4 ""
+Comment3 "Thanks to TLC and eslapion!"
+Comment4 "Licensed under CC BY-NC-SA 4.0"
 $EndDescr
 $Comp
 L Device:C C?

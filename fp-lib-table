@@ -1,3 +1,3 @@
 (fp_lib_table
-  (lib (name Hannes256)(type KiCad)(uri ${KIPRJMOD}/Hannes256.pretty)(options "")(descr ""))
+  (lib (name Hannes512)(type KiCad)(uri ${KIPRJMOD}/Hannes512.pretty)(options "")(descr ""))
 )
