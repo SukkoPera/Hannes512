@@ -280,23 +280,12 @@ DataBus
 Connection ~ 7240 5670
 Text GLabel 6275 2895 0    50   Input ~ 0
 a[0..18]
-Text Label 9730 4540 2    50   ~ 0
-~sram_ce
-Wire Wire Line
-	9285 4340 9380 4340
-Wire Wire Line
-	9380 4340 9380 4540
-Connection ~ 9380 4540
-Wire Wire Line
-	9380 4540 9285 4540
 Text GLabel 9955 4440 2    50   Input ~ 0
 ~SRAM_CE
 Wire Wire Line
 	9775 4540 9775 4440
 Wire Wire Line
 	9775 4440 9955 4440
-Wire Wire Line
-	9380 4540 9775 4540
 Text Label 9730 4040 2    50   ~ 0
 a6
 Text Label 9730 4240 2    50   ~ 0
@@ -305,6 +294,12 @@ Text Label 9730 4740 2    50   ~ 0
 d6
 Text Label 9730 4640 2    50   ~ 0
 d7
+Wire Wire Line
+	9285 4540 9465 4540
+Wire Wire Line
+	9285 4340 9465 4340
+Wire Wire Line
+	9465 4340 9465 4540
 Wire Bus Line
 	7240 4640 7240 5670
 Wire Bus Line
@@ -313,4 +308,7 @@ Wire Bus Line
 	9830 2895 9830 4340
 Wire Bus Line
 	7240 2895 7240 4540
+Connection ~ 9465 4540
+Wire Wire Line
+	9465 4540 9775 4540
 $EndSCHEMATC

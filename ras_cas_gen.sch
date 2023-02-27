@@ -611,9 +611,7 @@ Wire Wire Line
 Wire Wire Line
 	2905 7350 2905 7675
 Wire Wire Line
-	3020 7550 2625 7550
-Wire Wire Line
-	3020 7150 2730 7150
+	3020 7150 2695 7150
 NoConn ~ 4020 7350
 Text Notes 3005 7250 0    50   ~ 0
 ~SET
@@ -621,9 +619,9 @@ Text Notes 2915 7665 0    50   ~ 0
 ~RESET
 Wire Wire Line
 	4990 7150 4020 7150
-Text GLabel 2730 7150 0    50   Input ~ 0
+Text GLabel 2695 7150 0    50   Input ~ 0
 ~RESET
-Text Label 1455 7550 0    50   ~ 0
+Text Label 1230 7550 0    50   ~ 0
 cs_ramwr
 Text Notes 3095 8545 0    50   ~ 0
 BISTABLE CONFIGURATION
@@ -1009,27 +1007,27 @@ THIS CIRCUIT WAS DERIVED\nFROM WORK BY ESLAPION
 $Comp
 L 74xx:74HCT02 U?
 U 4 1 641A3A3A
-P 2325 7550
+P 2100 7550
 AR Path="/62E48B71/641A3A3A" Ref="U?"  Part="4" 
 AR Path="/63A22C28/641A3A3A" Ref="U3"  Part="4" 
-F 0 "U3" H 2325 7875 50  0000 C CNN
-F 1 "74HCT02" H 2325 7784 50  0000 C CNN
-F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 2325 7550 50  0001 C CNN
-F 3 "http://www.ti.com/lit/gpn/sn74hct02" H 2325 7550 50  0001 C CNN
-	4    2325 7550
+F 0 "U3" H 2100 7875 50  0000 C CNN
+F 1 "74HCT02" H 2100 7784 50  0000 C CNN
+F 2 "Package_SO:SOIC-14_3.9x8.7mm_P1.27mm" H 2100 7550 50  0001 C CNN
+F 3 "http://www.ti.com/lit/gpn/sn74hct02" H 2100 7550 50  0001 C CNN
+	4    2100 7550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2025 7450 1890 7450
+	1800 7450 1665 7450
 Wire Wire Line
-	1890 7450 1890 7550
+	1665 7450 1665 7550
 Wire Wire Line
-	1890 7650 2025 7650
+	1665 7650 1800 7650
 Wire Wire Line
-	1890 7550 1455 7550
-Connection ~ 1890 7550
+	1665 7550 1230 7550
+Connection ~ 1665 7550
 Wire Wire Line
-	1890 7550 1890 7650
+	1665 7550 1665 7650
 Text Notes 8095 3160 0    50   ~ 0
 $FD16 WRITE (NOTE: ACTIVE *HIGH*!)
 Wire Wire Line
@@ -1095,6 +1093,10 @@ F 3 "~" H 13030 6975 50  0001 C CNN
 	1    13030 6975
 	1    0    0    -1  
 $EndComp
+Text Label 2420 7550 0    50   ~ 0
+~cs_ramwr
+Wire Wire Line
+	2400 7550 3020 7550
 Wire Bus Line
 	7590 2250 7590 3360
 Wire Bus Line
