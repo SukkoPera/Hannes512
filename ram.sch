@@ -300,6 +300,9 @@ Wire Wire Line
 	9285 4340 9465 4340
 Wire Wire Line
 	9465 4340 9465 4540
+Connection ~ 9465 4540
+Wire Wire Line
+	9465 4540 9775 4540
 Wire Bus Line
 	7240 4640 7240 5670
 Wire Bus Line
@@ -308,7 +311,4 @@ Wire Bus Line
 	9830 2895 9830 4340
 Wire Bus Line
 	7240 2895 7240 4540
-Connection ~ 9465 4540
-Wire Wire Line
-	9465 4540 9775 4540
 $EndSCHEMATC

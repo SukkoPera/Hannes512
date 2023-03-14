@@ -4,4 +4,5 @@
   (lib (name GAL20V8)(type Legacy)(uri ${KIPRJMOD}/lib/GAL20V8.lib)(options "")(descr ""))
   (lib (name void)(type Legacy)(uri ${KIPRJMOD}/lib/void.lib)(options "")(descr ""))
   (lib (name AS6C4008)(type Legacy)(uri ${KIPRJMOD}/lib/AS6C4008.lib)(options "")(descr ""))
+  (lib (name DT1042)(type Legacy)(uri ${KIPRJMOD}/lib/DT1042.lib)(options "")(descr ""))
 )
