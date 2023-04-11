@@ -1,6 +1,23 @@
+/* Hannes512 GAL Equations
+ * Copyright 2022-2023 SukkoPera <software@sukkology.net>
+ *
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <https://www.gnu.org/licenses/>.
+ */
+
 Name Hannes512_GAL20;
 Partno TBD;
-Date 26/07/2022;
+Date 11/04/2023;
 Revision 01;
 Designer SukkoPera;
 Company OpenRetroWorks;
@@ -13,15 +30,15 @@ ORDER: a15, a14, a13, a12, 		aec, 		p7, p6, 	p2, p1, p0, 	a18, a17, a16;
 VECTORS:
 
 /* aec=1 (cpu) */
-0000 1 00 000 HHH	/* Address 0xxx, never switched */
-0000 1 00 001 HHH
-0000 1 00 010 HHH
-0000 1 00 011 HHH
-0000 1 00 100 HHH
-0000 1 00 101 HHH
-0000 1 00 110 HHH
-0000 1 00 111 HHH
-		  
+0000 1 00 000 LHH	/* Address 0xxx, never switched, always goes to bank 3 */
+0000 1 00 001 LHH
+0000 1 00 010 LHH
+0000 1 00 011 LHH
+0000 1 00 100 LHH
+0000 1 00 101 LHH
+0000 1 00 110 LHH
+0000 1 00 111 LHH
+
 0010 1 00 000 LLL	/* Address 2xxx, p7 = 0 => switched */
 0010 1 00 001 LLH
 0010 1 00 010 LHL
@@ -30,16 +47,16 @@ VECTORS:
 0010 1 00 101 HLH
 0010 1 00 110 HHL
 0010 1 00 111 HHH
-		  
-0010 1 10 000 HHH	/* Address 2xxx, p7 = 1 => not switched */
-0010 1 10 001 HHH
-0010 1 10 010 HHH
-0010 1 10 011 HHH
-0010 1 10 100 HHH
-0010 1 10 101 HHH
-0010 1 10 110 HHH
-0010 1 10 111 HHH
-		  
+
+0010 1 10 000 LHH	/* Address 2xxx, p7 = 1 => not switched, bank 3 */
+0010 1 10 001 LHH
+0010 1 10 010 LHH
+0010 1 10 011 LHH
+0010 1 10 100 LHH
+0010 1 10 101 LHH
+0010 1 10 110 LHH
+0010 1 10 111 LHH
+
 1111 1 00 000 LLL	/* Address Fxxx, always switched */
 1111 1 00 001 LLH
 1111 1 00 010 LHL
@@ -48,54 +65,54 @@ VECTORS:
 1111 1 00 101 HLH
 1111 1 00 110 HHL
 1111 1 00 111 HHH
-		  
-/* aec=0 (ted), p6=0 (ted always in bank 7) */
-0000 0 00 000 HHH
-0000 0 00 001 HHH
-0000 0 00 010 HHH
-0000 0 00 011 HHH
-0000 0 00 100 HHH
-0000 0 00 101 HHH
-0000 0 00 110 HHH
-0000 0 00 111 HHH
-		  
-0010 0 00 000 HHH
-0010 0 00 001 HHH
-0010 0 00 010 HHH
-0010 0 00 011 HHH
-0010 0 00 100 HHH
-0010 0 00 101 HHH
-0010 0 00 110 HHH
-0010 0 00 111 HHH
-		  
-0010 0 10 000 HHH
-0010 0 10 001 HHH
-0010 0 10 010 HHH
-0010 0 10 011 HHH
-0010 0 10 100 HHH
-0010 0 10 101 HHH
-0010 0 10 110 HHH
-0010 0 10 111 HHH
-		  
-1111 0 00 000 HHH
-1111 0 00 001 HHH
-1111 0 00 010 HHH
-1111 0 00 011 HHH
-1111 0 00 100 HHH
-1111 0 00 101 HHH
-1111 0 00 110 HHH
-1111 0 00 111 HHH
-		  
+
+/* aec=0 (ted), p6=0 (ted always in bank 3) */
+0000 0 00 000 LHH
+0000 0 00 001 LHH
+0000 0 00 010 LHH
+0000 0 00 011 LHH
+0000 0 00 100 LHH
+0000 0 00 101 LHH
+0000 0 00 110 LHH
+0000 0 00 111 LHH
+
+0010 0 00 000 LHH
+0010 0 00 001 LHH
+0010 0 00 010 LHH
+0010 0 00 011 LHH
+0010 0 00 100 LHH
+0010 0 00 101 LHH
+0010 0 00 110 LHH
+0010 0 00 111 LHH
+
+0010 0 10 000 LHH
+0010 0 10 001 LHH
+0010 0 10 010 LHH
+0010 0 10 011 LHH
+0010 0 10 100 LHH
+0010 0 10 101 LHH
+0010 0 10 110 LHH
+0010 0 10 111 LHH
+
+1111 0 00 000 LHH
+1111 0 00 001 LHH
+1111 0 00 010 LHH
+1111 0 00 011 LHH
+1111 0 00 100 LHH
+1111 0 00 101 LHH
+1111 0 00 110 LHH
+1111 0 00 111 LHH
+
 /* aec=0 (ted), p6=1 (ted switches banks) */
-0000 0 01 000 HHH
-0000 0 01 001 HHH
-0000 0 01 010 HHH
-0000 0 01 011 HHH
-0000 0 01 100 HHH
-0000 0 01 101 HHH
-0000 0 01 110 HHH
-0000 0 01 111 HHH
-		  
+0000 0 01 000 LHH
+0000 0 01 001 LHH
+0000 0 01 010 LHH
+0000 0 01 011 LHH
+0000 0 01 100 LHH
+0000 0 01 101 LHH
+0000 0 01 110 LHH
+0000 0 01 111 LHH
+
 0010 0 01 000 LLL
 0010 0 01 001 LLH
 0010 0 01 010 LHL
@@ -104,16 +121,16 @@ VECTORS:
 0010 0 01 101 HLH
 0010 0 01 110 HHL
 0010 0 01 111 HHH
-		  
-0010 0 11 000 HHH
-0010 0 11 001 HHH
-0010 0 11 010 HHH
-0010 0 11 011 HHH
-0010 0 11 100 HHH
-0010 0 11 101 HHH
-0010 0 11 110 HHH
-0010 0 11 111 HHH
-		  
+
+0010 0 11 000 LHH
+0010 0 11 001 LHH
+0010 0 11 010 LHH
+0010 0 11 011 LHH
+0010 0 11 100 LHH
+0010 0 11 101 LHH
+0010 0 11 110 LHH
+0010 0 11 111 LHH
+
 1111 0 01 000 LLL
 1111 0 01 001 LLH
 1111 0 01 010 LHL
