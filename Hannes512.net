@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/sukko/Documents/kicad/Hannes512/Hannes512.sch)
-    (date "Tue 28 Feb 2023 23:53:57 CET")
+    (date "Fri 29 Dec 2023 12:21:19 CET")
     (tool "Eeschema 5.1.12")
     (sheet (number 1) (name /) (tstamps /)
       (title_block
@@ -61,6 +61,9 @@
     (comp (ref V2)
       (value LOGO)
       (footprint Hannes512:logo)
+      (fields
+        (field (name LCSC) -)
+        (field (name MouserPN) -))
       (libsource (lib void) (part Void) (description ""))
       (sheetpath (names /) (tstamps /))
       (tstamp 63C4EC1B))
@@ -68,6 +71,8 @@
       (value 10k)
       (footprint Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder)
       (datasheet ~)
+      (fields
+        (field (name LCSC) C17414))
       (libsource (lib Device) (part R) (description Resistor))
       (sheetpath (names /) (tstamps /))
       (tstamp 639189C6))
@@ -75,6 +80,8 @@
       (value 10k)
       (footprint Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder)
       (datasheet ~)
+      (fields
+        (field (name LCSC) C17414))
       (libsource (lib Device) (part R) (description Resistor))
       (sheetpath (names /) (tstamps /))
       (tstamp 639189C0))
@@ -88,18 +95,29 @@
     (comp (ref V1)
       (value CC_LOGO)
       (footprint Hannes512:cc_by_nc_sa)
+      (fields
+        (field (name LCSC) -)
+        (field (name MouserPN) -))
       (libsource (lib void) (part Void) (description ""))
       (sheetpath (names /) (tstamps /))
       (tstamp 64911216))
     (comp (ref U8)
       (value DT1042)
       (footprint Package_SO:TSOP-6_1.65x3.05mm_P0.95mm)
+      (fields
+        (field (name LCSC) C460064)
+        (field (name MouserPN) 621-DT1042-04TS-7)
+        (field (name Notes) "Optional, for TED ESD protection through joystick port"))
       (libsource (lib DT1042) (part DT1042) (description ""))
       (sheetpath (names /) (tstamps /))
       (tstamp 64B55A32))
     (comp (ref U9)
       (value DT1042)
       (footprint Package_SO:TSOP-6_1.65x3.05mm_P0.95mm)
+      (fields
+        (field (name LCSC) C460064)
+        (field (name MouserPN) 621-DT1042-04TS-7)
+        (field (name Notes) "Optional, for TED ESD protection through joystick port"))
       (libsource (lib DT1042) (part DT1042) (description ""))
       (sheetpath (names /) (tstamps /))
       (tstamp 64B64DD4))
@@ -107,6 +125,8 @@
       (value 100n)
       (footprint Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder)
       (datasheet ~)
+      (fields
+        (field (name LCSC) C49678))
       (libsource (lib Device) (part C) (description "Unpolarized capacitor"))
       (sheetpath (names /RAM/) (tstamps /62E48B71/))
       (tstamp 63BD05FA))
@@ -114,6 +134,9 @@
       (value AS6C4008)
       (footprint Package_DIP:DIP-32_W15.24mm_Socket_LongPads)
       (datasheet DOCUMENTATION)
+      (fields
+        (field (name MouserPN) 913-AS6C4008-55PCN)
+        (field (name Notes) "-55PIN is also fine"))
       (libsource (lib AS6C4008) (part AS6C4008) (description ""))
       (sheetpath (names /RAM/) (tstamps /62E48B71/))
       (tstamp 63F5A21F))
@@ -121,6 +144,8 @@
       (value 100n)
       (footprint Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder)
       (datasheet ~)
+      (fields
+        (field (name LCSC) C49678))
       (libsource (lib Device) (part C) (description "Unpolarized capacitor"))
       (sheetpath (names "/~RAS~/~CAS~ Generation/") (tstamps /63A22C28/))
       (tstamp 63A64678))
@@ -128,6 +153,8 @@
       (value 100n)
       (footprint Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder)
       (datasheet ~)
+      (fields
+        (field (name LCSC) C49678))
       (libsource (lib Device) (part C) (description "Unpolarized capacitor"))
       (sheetpath (names "/~RAS~/~CAS~ Generation/") (tstamps /63A22C28/))
       (tstamp 63ECD15A))
@@ -143,6 +170,7 @@
       (footprint Package_SO:SO-20_5.3x12.6mm_P1.27mm)
       (datasheet 74xx/74hc573.pdf)
       (fields
+        (field (name LCSC) C2864941)
         (field (name MouserPN) 595-SN74HCT573NSR))
       (libsource (lib 74xx) (part 74LS573) (description "8-bit Latch 3-state outputs"))
       (sheetpath (names "/~RAS~/~CAS~ Generation/") (tstamps /63A22C28/))
@@ -151,6 +179,8 @@
       (value NE555)
       (footprint Package_SO:SOIC-8_3.9x4.9mm_P1.27mm)
       (datasheet http://www.ti.com/lit/ds/symlink/ne555.pdf)
+      (fields
+        (field (name LCSC) C5125085))
       (libsource (lib Timer) (part NE555D) (description "Precision Timers, 555 compatible, SOIC-8"))
       (sheetpath (names "/~RAS~/~CAS~ Generation/") (tstamps /63A22C28/))
       (tstamp 63DF3FB7))
@@ -158,6 +188,8 @@
       (value 10n)
       (footprint Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder)
       (datasheet ~)
+      (fields
+        (field (name LCSC) C1710))
       (libsource (lib Device) (part C) (description "Unpolarized capacitor"))
       (sheetpath (names "/~RAS~/~CAS~ Generation/") (tstamps /63A22C28/))
       (tstamp 63E09791))
@@ -165,6 +197,8 @@
       (value 1k)
       (footprint Resistor_SMD:R_Array_Convex_4x0603)
       (datasheet ~)
+      (fields
+        (field (name LCSC) C20197))
       (libsource (lib Device) (part R_Pack04) (description "4 resistor network, parallel topology"))
       (sheetpath (names "/~RAS~/~CAS~ Generation/") (tstamps /63A22C28/))
       (tstamp 63EB16B5))
@@ -172,6 +206,8 @@
       (value 1k)
       (footprint Resistor_SMD:R_Array_Convex_4x0603)
       (datasheet ~)
+      (fields
+        (field (name LCSC) C20197))
       (libsource (lib Device) (part R_Pack04) (description "4 resistor network, parallel topology"))
       (sheetpath (names "/~RAS~/~CAS~ Generation/") (tstamps /63A22C28/))
       (tstamp 63EB357C))
@@ -180,6 +216,7 @@
       (footprint Package_SO:SO-20_5.3x12.6mm_P1.27mm)
       (datasheet http://www.ti.com/lit/gpn/sn74LS245)
       (fields
+        (field (name LCSC) C133641)
         (field (name MouserPN) 595-SN74HCT245ANSR))
       (libsource (lib 74xx) (part 74LS245) (description "Octal BUS Transceivers, 3-State outputs"))
       (sheetpath (names "/~RAS~/~CAS~ Generation/") (tstamps /63A22C28/))
@@ -188,6 +225,8 @@
       (value 100n)
       (footprint Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder)
       (datasheet ~)
+      (fields
+        (field (name LCSC) C49678))
       (libsource (lib Device) (part C) (description "Unpolarized capacitor"))
       (sheetpath (names "/~RAS~/~CAS~ Generation/") (tstamps /63A22C28/))
       (tstamp 63FFE9A0))
@@ -195,6 +234,9 @@
       (value 74HCT02)
       (footprint Package_SO:SOIC-14_3.9x8.7mm_P1.27mm)
       (datasheet http://www.ti.com/lit/gpn/sn74hct02)
+      (fields
+        (field (name LCSC) C471050)
+        (field (name MouserPN) 771-74HCT02D-T))
       (libsource (lib 74xx) (part 74HCT02) (description "quad 2-input NOR gate"))
       (sheetpath (names "/~RAS~/~CAS~ Generation/") (tstamps /63A22C28/))
       (tstamp 641A3A28))
@@ -202,6 +244,8 @@
       (value 100n)
       (footprint Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder)
       (datasheet ~)
+      (fields
+        (field (name LCSC) C49678))
       (libsource (lib Device) (part C) (description "Unpolarized capacitor"))
       (sheetpath (names "/~RAS~/~CAS~ Generation/") (tstamps /63A22C28/))
       (tstamp 641A3A46))
@@ -209,6 +253,8 @@
       (value 100n)
       (footprint Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder)
       (datasheet ~)
+      (fields
+        (field (name LCSC) C49678))
       (libsource (lib Device) (part C) (description "Unpolarized capacitor"))
       (sheetpath (names "/~RAS~/~CAS~ Generation/") (tstamps /63A22C28/))
       (tstamp 63FF0E8D)))
@@ -642,16 +688,16 @@
       (node (ref J0) (pin 20))
       (node (ref U1) (pin 20)))
     (net (code 13) (name /k4)
-      (node (ref U1) (pin 19))
+      (node (ref J0) (pin 19))
       (node (ref U9) (pin 6))
-      (node (ref J0) (pin 19)))
+      (node (ref U1) (pin 19)))
     (net (code 14) (name /k3)
-      (node (ref U8) (pin 3))
       (node (ref J0) (pin 18))
+      (node (ref U8) (pin 3))
       (node (ref U1) (pin 18)))
     (net (code 15) (name /k2)
-      (node (ref J0) (pin 17))
       (node (ref U1) (pin 17))
+      (node (ref J0) (pin 17))
       (node (ref U8) (pin 1)))
     (net (code 16) (name /k1)
       (node (ref U1) (pin 16))
