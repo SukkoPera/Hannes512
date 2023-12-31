@@ -29,9 +29,11 @@ While the mechanism originally devised by Hannes/Solder for 256 kB memory expans
 This problem affects [Dream World](img/dreamworld_fd16_startup.png) and even the modern-era [Lykia](img/lykia_fd16_startup.png), for instance. The only real solution is to patch the software, but until someone does that, another option is to just limit memory expansions to 256 kB. After all, there is no software (... yet!) that needs more than that, so it currently looks like an acceptable compromise.
 
 The great news is that this is rather easy to do in Hannes512, you just need to program the GAL with a different file. The [gal directory](gal/) contains a number of different JED files:
-* Hannes512_GAL20.jed, Hannes512_GAL22.jed: These files provide the full 512 kB.
-* Hanns512_G20256.jed, Hanns512_G22256.jed: These files are limited to 256 kB and are the recommended ones to be used at the time being.
-* Hanns512_G20H37.jed, Hanns512_G22H37.jed: These files feature a hack that tries to provide more than 256 kB of memory while making banks 3 and 7 the same bank; it's a temporary hack I made mainly for myself, so please disregard it.
+* **Hannes512_GAL2x.jed**: These files provide the full 512 kB.
+* **Hanns512_G2x256.jed**: These files are limited to 256 kB and are the **recommended ones** to be used at the time being.
+* **Hanns512_G2xH37.jed**: These files feature a hack that tries to provide more than 256 kB of memory while making banks 3 and 7 the same bank; it's a temporary hack I made mainly for myself, so please disregard it.
+
+Feel free to open an issue if you have some suggestions on this topic.
 
 ## Testing
 See [Hannes256](https://github.com/SukkoPera/Hannes256#testing).
@@ -64,6 +66,7 @@ You can also buy me a coffee if you want:
 
 ## Thanks
 * Hannes and Solder for the original design and documentation.
+* eslapion for the SRAM enable circuit, saving me endless hours of debugging.
 * Levente Hársfalvi (TLC) for plenty of help, in particular with the MOS 6529 replacement circuit.
 * siz for the memory test utility.
 * Alit Design for the [Crotah font](https://www.fontspace.com/crotah-font-f86873) used for the logo.
