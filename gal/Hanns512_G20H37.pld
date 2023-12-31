@@ -15,7 +15,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-Name Hannes512_GAL20;
+Name Hanns512_G20H37;
 Partno TBD;
 Date 06/09/2023;
 Revision 01;
@@ -29,4 +29,5 @@ Device g20v8as;			// Simple mode
 // Inputs: 1-11, 13, 14, 23
 // Inputs/Outputs: 15-22 (18 and 19 have no fb path in simple mode, 15 and 22 do not in complex mode)
 
+$DEFINE HACK37 'b'1
 $INCLUDE hannes_main.inc

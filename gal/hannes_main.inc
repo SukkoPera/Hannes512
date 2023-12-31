@@ -22,7 +22,7 @@
  * $1000. A further restriction is possible if you use bit 7. The control register for the expansion is located at
  * address $FD16 (64790):
  *
- * - Bit 0/1/2: Select RAM-bank (0-7), standard is RAM-bank 7
+ * - Bit 0/1/2: Select RAM-bank (0-7)
  * - Bit 3: Leave at 1
  * - Bit 4/5: Leave these set to 1 for compatibility with the expansion by CSORY
  * - Bit 6: "TED-feature", added in "Update 1":
@@ -33,18 +33,14 @@
  *   - 1: >$3fff
  *
  * Note:
- * - At power-on the plus/4 all bits are "1". The standard bank is bank 7.
+ * - At power-on the plus/4 all bits are "1".
  *
  * This GAL implements all the glue logic shown in the schematics by Solder/Synergy, *except* the 6529B implementing the
  * control register. Since that IC is not easy to find these days, we use an alternative circuit involving a 74x573 for
  * the write part (a 74x273 could be used too, but the '573 simplified our routing), a 74x245 for the readback part,
  * some pull-up resistors and a NE555 to implement the "outputs-high-on-reset" feature of the 6529 (a 74x74 or any other
  * D-type flip-flop could replace the '555, but I didn't want to have a partially-used IC and I had a ton of '555 lying
- * around). It could be objected that this alternative circuit is a bit overkill as the expansion only uses p0/1/6/7,
- * but a lot of the software already available which supports this expansion seems to read/write the whole 8 bits of the
- * register in their expansion-detecting algorithms, so better play safe. V1 of the expansion only implemented those 4
- * bits though, and all the software I tested still appeared to work correctly. If you are writing a new detection
- * algorithm, I'd recommend to only use p0/1/2/6/7.
+ * around).
  * 
  * Thanks to Levente Harsfalvi (TLC) for suggesting this replacement circuit for the 6529.
  */
@@ -56,8 +52,7 @@
  * original purpose and using the remaining addresses for other stuff. In particular, $FD16 will be the control register
  * for our RAM expansion (see ioarea.txt for further address assignments).
  * Note: the Userport /CS range is also known as "Cassette" on the C16 schematics, as it actually has no Userport.
- * Note2: On the +4, the track between pin 16 of the PLA (U19) and pin 19 of the 6529 controlling the Userport (U5)
- *        must be cut and the two sides must be connected to the corresponding pins below.
+ * Note 2: PLA pin 16 must be lifted from its socket and NOT make contact with it.
  */
 Pin 1 = a1;
 Pin 2 = a2;
@@ -80,9 +75,9 @@ Pin 7 = a13;
 Pin 8 = a14;
 Pin 9 = a15;
 Pin 10 = aec;				// Low when TED accesses bus
-Pin 11 = p2;				// P0 from RAM Register
+Pin 11 = p2;				// P2 from RAM Register
 Pin 13 = p1;				// P1 from RAM Register
-Pin 14 = p0;				// P2 from RAM Register
+Pin 14 = p0;				// P0 from RAM Register
 Pin 15 = p6;				// P6 from RAM Register
 Pin 16 = p7;				// P7 from RAM Register
 
@@ -106,9 +101,19 @@ ramreg_wcs = !rw & !userport_range & addr:xxx6;		// R/W low => Writing. Note tha
 
 // 512 kB SRAM Extra Address Bits Generation
 _switchable_range = (!p7 & addr:[1000..FFFF]) # (p7 & addr:[4000..FFFF]);
-//~ a16 = (aec & (p0 # !_switchable_range)) # (!aec & (!p6 # !_switchable_range # p0));
-//~ a17 = (aec & (p1 # !_switchable_range)) # (!aec & (!p6 # !_switchable_range # p1));
-//~ a18 = (aec & (p2 # !_switchable_range)) # (!aec & (!p6 # !_switchable_range # p2));
 a16 = !_switchable_range # (!aec & !p6) # p0;
 a17 = !_switchable_range # (!aec & !p6) # p1;
+
+$IFDEF TWOFIVESIX
+a18 = 'b'0;
+$ELSE
+$IFDEF HACK37
+/* This is different from the above, since it needs to be LOW when an address outside the switchable range is on the bus
+ * and when TED is accessing memory with P6 LOW this way slot 3 will be selected, maintaining compatibility with 256k
+ * expansions.
+ */
+a18 = !_switchable_range # (!aec & !p6) # (p2 # (p1 & p0));
+$ELSE
 a18 = !_switchable_range # (!aec & !p6) # p2;
+$ENDIF
+$ENDIF

@@ -15,7 +15,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-Name Hannes512_GAL20;
+Name Hanns512_G22H37;
 Partno TBD;
 Date 06/09/2023;
 Revision 01;
@@ -23,10 +23,11 @@ Designer SukkoPera;
 Company OpenRetroWorks;
 Assembly None;
 Location Italy;
-Device g20v8as;			// Simple mode
+Device g22v10;
 
-// GAL20V8
-// Inputs: 1-11, 13, 14, 23
-// Inputs/Outputs: 15-22 (18 and 19 have no fb path in simple mode, 15 and 22 do not in complex mode)
+// GAL22V10
+// Inputs: 1-11, 13
+// Inputs/Outputs: 14-23)
 
+$DEFINE HACK37 'b'1
 $INCLUDE hannes_main.inc
